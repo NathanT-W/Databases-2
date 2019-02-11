@@ -1,2 +1,2 @@
-# Databases-2
-Script files for Databases 2
+# CSY1026 Assignment 2 - Group 1
+Group 1 SQL script files for CSY1026 Assignment 2.
