@@ -34,3 +34,9 @@ PROMPT Creating 'employee_specialisms' table
 CREATE TABLE employee_specialisms(
 employee_id NUMBER(8),
 specialism_id NUMBER(8));
+
+--CREATE SEQUENCES
+--seq_employees
+CREATE SEQUENCE seq_employees
+INCREMENT BY 1
+START WITH 00000001;
