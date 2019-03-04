@@ -32,6 +32,10 @@ DROP TABLE project_resources;
 PROMPT Dropping 'resources' table
 DROP TABLE resources;
 
+-- Drop 'projects' table
+PROMPT Dropping 'projects' table
+DROP TABLE projects;
+
 --Drop 'employees' table
 PROMPT Dropping 'employees' table
 DROP TABLE employees;

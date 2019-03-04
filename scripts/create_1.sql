@@ -61,6 +61,13 @@ resource_name VARCHAR2(20),
 resource_description VARCHAR2(50),
 resource_cost NUMBER(8));
 
+--Create 'project_resources' table
+PROMPT Creating 'project_resources' table
+CREATE TABLE project_resources(
+project_id NUMBER(8),
+project_requirements VARCHAR2(50),
+resource_id NUMBER(8));
+
 -- Create 'project_teams' table
 PROMPT Creating 'project_teams' table
 CREATE TABLE project_teams(
