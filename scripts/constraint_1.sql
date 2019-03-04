@@ -84,3 +84,6 @@ CHECK (postcode = UPPER(postcode));
 ALTER TABLE employees
 ADD CONSTRAINT ck_country
 CHECK (country = UPPER(country));
+
+PROMPT Commit changes
+COMMIT;
