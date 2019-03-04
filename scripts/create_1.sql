@@ -22,6 +22,19 @@ county VARCHAR2(20) NOT NULL,
 postcode VARCHAR2(8) NOT NULL,
 country CHAR(2) NOT NULL);
 
+--Create 'specialisms' table
+PROMPT Creating 'specialisms' table
+CREATE TABLE specialisms(
+specialism_id NUMBER(8),
+name VARCHAR2(20) NOT NULL,
+description VARCHAR2(280) NOT NULL);
+
+--Create 'employee_specialisms' table
+PROMPT Creating 'employee_specialisms' table
+CREATE TABLE employee_specialisms(
+employee_id NUMBER(8),
+specialism_id NUMBER(8));
+
 -- Create 'projects' table
 
 -- Create 'project_teams' table
@@ -47,21 +60,15 @@ description VARCHAR2(25),
 owner_id NUMBER(8) NOT NULL,
 deadline DATE NOT NULL);
 
---Create 'specialisms' table
-PROMPT Creating 'specialisms' table
-CREATE TABLE specialisms(
-specialism_id NUMBER(8),
-name VARCHAR2(20) NOT NULL,
-description VARCHAR2(280) NOT NULL);
-
---Create 'employee_specialisms' table
-PROMPT Creating 'employee_specialisms' table
-CREATE TABLE employee_specialisms(
-employee_id NUMBER(8),
-specialism_id NUMBER(8));
-
 --CREATE SEQUENCES
 --seq_employees
+PROMPT Creating 'seq_employees' sequence
 CREATE SEQUENCE seq_employees
+INCREMENT BY 1
+START WITH 00000001;
+
+--seq_specialisms
+PROMPT Creating 'seq_specialisms' sequence
+CREATE SEQUENCE sea_specialisms
 INCREMENT BY 1
 START WITH 00000001;
