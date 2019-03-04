@@ -45,3 +45,44 @@ ALTER TABLE employee_specialisms
 ADD CONSTRAINT fk_s_employee_specialisms
 FOREIGN KEY (specialism_id)
 REFERENCES specialisms(specialism_id);
+
+
+--CREATE CHECK Constraints
+PROMPT Creating check constraints for the 'employees' table
+ALTER TABLE employees
+ADD CONSTRAINT ck_title
+CHECK (title = UPPER(title));
+
+ALTER TABLE employees
+ADD CONSTRAINT ck_surname
+CHECK (surname = UPPER(surname));
+
+ALTER TABLE employees
+ADD CONSTRAINT ck_firstname
+CHECK (firstname = UPPER(firstname));
+
+ALTER TABLE employees
+ADD CONSTRAINT ck_firstname
+CHECK (firstname = UPPER(firstname));
+
+ALTER TABLE employees
+ADD CONSTRAINT ck_streetname
+CHECK (streetname = UPPER(streetname));
+
+ALTER TABLE employees
+ADD CONSTRAINT ck_city
+CHECK (city = UPPER(city));
+
+ALTER TABLE employees
+ADD CONSTRAINT ck_county
+CHECK (county = UPPER(county));
+
+ALTER TABLE employees
+ADD CONSTRAINT ck_postcode
+CHECK (postcode = UPPER(postcode));
+
+ALTER TABLE employees
+ADD CONSTRAINT ck_country
+CHECK (country = UPPER(country));
+
+
