@@ -13,3 +13,6 @@ VALUES(seq_employees.NEXTVAL, 'MR', 'JOHN', 'DOE', 'M', 'john@doe.com', '0123456
 PROMPT Inserting data into the 'specialisms' table
 INSERT INTO specialisms 
 VALUES(seq_specialisms.NEXTVAL, 'TEST', 'This is a test.');
+
+PROMPT Commit changes
+COMMIT;

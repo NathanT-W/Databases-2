@@ -100,7 +100,7 @@ START WITH 00000001;
 
 --seq_specialisms
 PROMPT Creating 'seq_specialisms' sequence
-CREATE SEQUENCE sea_specialisms
+CREATE SEQUENCE seq_specialisms
 INCREMENT BY 1
 START WITH 00000001;
 
@@ -115,3 +115,6 @@ PROMPT Creating 'seq_actions' sequence
 CREATE SEQUENCE seq_actions
 INCREMENT BY 1
 START WITH 00000001;
+
+PROMPT Commit changes
+COMMIT;
