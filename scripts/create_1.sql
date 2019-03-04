@@ -103,3 +103,16 @@ PROMPT Creating 'seq_specialisms' sequence
 CREATE SEQUENCE sea_specialisms
 INCREMENT BY 1
 START WITH 00000001;
+
+--seq_meetings
+PROMPT Creating 'seq_meetings' sequence
+CREATE SEQUENCE 'seq_meetings'
+INCREMENT BY 1
+START WITH 00001;
+
+--seq_actions
+PROMPT Creating 'seq_actions' sequence
+PROMPT Creating ' seq_actions' sequence
+CREATE SEQUENCE 'seq_actions'
+INCREMENT BY 1
+START WITH 00001;
