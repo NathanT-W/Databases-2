@@ -10,12 +10,15 @@
 -- DROP Primary Keys
 
 PROMPT Dropping 'project_teams' Primary Key
+ALTER TABLE project_teams
 DROP CONSTRAINT pk_project_teams;
 
 PROMPT Dropping 'actions' Primary Key
+ALTER TABLE actions
 DROP CONSTRAINT pk_actions;
 
 PROMPT Dropping 'meetings' Primary Key
+DROP CONSTRAINT meetings
 DROP CONSTRAINT pk_meetings;
 
 --DROP TABLES
