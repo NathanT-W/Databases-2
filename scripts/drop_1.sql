@@ -54,3 +54,9 @@ DROP TABLE projects;
 --Drop 'employees' table
 PROMPT Dropping 'employees' table
 DROP TABLE employees;
+
+PROMPT Purge recyclebin
+PURGE RECYCLEBIN;
+
+PROMPT Commit changes
+COMMIT;
