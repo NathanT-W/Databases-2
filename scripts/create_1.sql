@@ -22,7 +22,6 @@ county VARCHAR2(20) NOT NULL,
 postcode VARCHAR2(8) NOT NULL,
 country CHAR(2) NOT NULL);
 
-<<<<<<< HEAD
 --Create 'specialisms' table
 PROMPT Creating 'specialisms' table
 CREATE TABLE specialisms(
@@ -36,8 +35,6 @@ CREATE TABLE employee_specialisms(
 employee_id NUMBER(8),
 specialism_id NUMBER(8));
 
--- Create 'projects' table
-=======
 --Create 'projects' table
 PROMPT Creating projects table
 CREATE TABLE projects(
@@ -56,7 +53,6 @@ resource_id NUMBER(8),
 resource_name VARCHAR2(20),
 resource_description VARCHAR2(50),
 resource_cost NUMBER(8));
->>>>>>> 014546c2f489ae96d456b4c063cc92934ab0bdce
 
 --Create 'project_resources' table
 PROMPT Creating 'project_resources' table
