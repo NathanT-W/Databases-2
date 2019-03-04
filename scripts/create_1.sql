@@ -50,6 +50,30 @@ CREATE TABLE resources (
     resource_description VARCHAR2(50),
     resource_cost NUMBER(8)
 );
+-- Create 'projects' table
+
+-- Create 'project_teams' table
+PROMPT Creating 'project_teams' table
+CREATE TABLE project_teams(
+employee_id NUMBER(8) NOT NULL,
+project_id NUMBER(8) NOT NULL);
+
+-- Create 'meetings' table
+PROMPT Creating 'meetings' table
+CREATE TABLE meetings(
+meeting_id NUMBER(5),
+team_id NUMBER(13) NOT NULL,
+meeting_date DATE NOT NULL);
+
+-- Create 'actions' table
+PROMPT Creating 'actions' table
+CREATE TABLE actions(
+action_id NUMBER(5),
+meeting_id NUMBER(5) NOT NULL,
+project_id NUMBER(8) NOT NULL,
+description VARCHAR2(25),
+owner_id NUMBER(8) NOT NULL,
+deadline DATE NOT NULL);
 
 --Create 'specialisms' table
 PROMPT Creating 'specialisms' table
