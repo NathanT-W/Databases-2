@@ -106,14 +106,13 @@ START WITH 00000001;
 
 --seq_meetings
 PROMPT Creating 'seq_meetings' sequence
-CREATE SEQUENCE 'seq_meetings'
+CREATE SEQUENCE seq_meetings
 INCREMENT BY 1
 START WITH 00000001;
 
 --seq_actions
 PROMPT Creating 'seq_actions' sequence
-PROMPT Creating ' seq_actions' sequence
-CREATE SEQUENCE 'seq_actions'
+CREATE SEQUENCE seq_actions
 INCREMENT BY 1
 START WITH 00000001;
 
