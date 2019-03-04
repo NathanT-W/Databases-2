@@ -18,7 +18,7 @@ ALTER TABLE actions
 DROP CONSTRAINT pk_actions;
 
 PROMPT Dropping 'meetings' Primary Key
-DROP CONSTRAINT meetings
+ALTER TABLE meetings
 DROP CONSTRAINT pk_meetings;
 
 --DROP TABLES
