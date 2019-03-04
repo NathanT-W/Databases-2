@@ -3,6 +3,21 @@
 * CSY1026 Databases 1 - Assignment 2
 */
 
+-- DROP Foreign Keys
+
+
+
+-- DROP Primary Keys
+
+PROMPT Dropping 'project_teams' Primary Key
+DROP CONSTRAINT pk_project_teams;
+
+PROMPT Dropping 'actions' Primary Key
+DROP CONSTRAINT pk_actions;
+
+PROMPT Dropping 'meetings' Primary Key
+DROP CONSTRAINT pk_meetings;
+
 --DROP TABLES
 --Drop 'employee_specialisms' table
 PROMPT Dropping 'employee_specialisms' table
