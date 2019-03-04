@@ -70,15 +70,15 @@ project_id NUMBER(8) NOT NULL);
 -- Create 'meetings' table
 PROMPT Creating 'meetings' table
 CREATE TABLE meetings(
-meeting_id NUMBER(5),
+meeting_id NUMBER(8),
 team_id NUMBER(13) NOT NULL,
 meeting_date DATE NOT NULL);
 
 -- Create 'actions' table
 PROMPT Creating 'actions' table
 CREATE TABLE actions(
-action_id NUMBER(5),
-meeting_id NUMBER(5) NOT NULL,
+action_id NUMBER(8),
+meeting_id NUMBER(8) NOT NULL,
 project_id NUMBER(8) NOT NULL,
 description VARCHAR2(25),
 owner_id NUMBER(8) NOT NULL,
@@ -101,11 +101,11 @@ START WITH 00000001;
 PROMPT Creating 'seq_meetings' sequence
 CREATE SEQUENCE 'seq_meetings'
 INCREMENT BY 1
-START WITH 00001;
+START WITH 00000001;
 
 --seq_actions
 PROMPT Creating 'seq_actions' sequence
 PROMPT Creating ' seq_actions' sequence
 CREATE SEQUENCE 'seq_actions'
 INCREMENT BY 1
-START WITH 00001;
+START WITH 00000001;
