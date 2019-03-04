@@ -108,4 +108,4 @@ PROMPT Creating 'seq_actions' sequence
 PROMPT Creating ' seq_actions' sequence
 CREATE SEQUENCE 'seq_actions'
 INCREMENT BY 1
-START WITH 00001
+START WITH 00001;
