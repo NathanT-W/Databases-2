@@ -48,6 +48,17 @@ ADD CONSTRAINT fk_s_employee_specialisms
 FOREIGN KEY (specialism_id)
 REFERENCES specialisms(specialism_id);
 
+-- Creating 'project_teams' Foreign Keys
+PROMPT Foreign Keys 'project_teams' table
+ALTER TABLE project_teams
+ADD CONSTRAINT fk_pt_employees
+FOREIGN KEY(employee_id)
+REFERENCES employees(employee_id);
+
+ALTER TABLE project_teams
+ADD CONSTRAINT fk_pt_projects
+FOREIGN KEY(project_id)
+REFERENCES projects(project_id);
 
 --CREATE CHECK Constraints
 PROMPT Creating check constraints for the 'employees' table
