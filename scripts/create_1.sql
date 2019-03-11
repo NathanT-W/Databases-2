@@ -32,26 +32,26 @@ description VARCHAR2(280) NOT NULL);
 --Create 'employee_specialisms' table
 PROMPT Creating 'employee_specialisms' table
 CREATE TABLE employee_specialisms(
-employee_id NUMBER(8),
-specialism_id NUMBER(8));
+employee_id NUMBER(8) NOT NULL,
+specialism_id NUMBER(8) NOT NULL);
 
 --Create 'projects' table
-PROMPT Creating projects table
+PROMPT 'creating projects' table
 CREATE TABLE projects(
-project_id NUMBER(8) NOT NULL,
-project_name VARCHAR2(20),
-project_aim VARCHAR2(100),
-project_start DATE,
-project_end DATE,
-project_budget NUMBER(10),
+project_id NUMBER(8),
+project_name VARCHAR2(20) NOT NULL,
+project_aim VARCHAR2(100) NOT NULL,
+project_start DATE NOT NULL,
+project_end DATE NOT NULL,
+project_budget NUMBER(10) NOT NULL,
 resource_id NUMBER(4) NOT NULL);
 
 --Create 'project_resources' table
 PROMPT Creating 'project_resources' table
 CREATE TABLE project_resources(
 project_id NUMBER(8),
-project_requirements VARCHAR2(50),
-resource_id NUMBER(8));
+project_requirements VARCHAR2(50) NOT NULL,
+resource_id NUMBER(8) NOT NULL);
 
 --Create 'resources' table
 PROMPT Creating 'resources' table
@@ -65,8 +65,8 @@ resource_cost NUMBER(8));
 PROMPT Creating 'project_resources' table
 CREATE TABLE project_resources(
 project_id NUMBER(8),
-project_requirements VARCHAR2(50),
-resource_id NUMBER(8));
+project_requirements VARCHAR2(50) NOT NULL,
+resource_id NUMBER(8) NOT NULL);
 
 -- Create 'project_teams' table
 PROMPT Creating 'project_teams' table

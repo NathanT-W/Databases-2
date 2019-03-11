@@ -9,19 +9,23 @@
 
 -- DROP Primary Keys
 
+--Drop 'project_teams' Primary Key
 PROMPT Dropping 'project_teams' Primary Key
 ALTER TABLE project_teams
 DROP CONSTRAINT pk_project_teams;
 
+--Drop 'actions' Primary Key'
 PROMPT Dropping 'actions' Primary Key
 ALTER TABLE actions
 DROP CONSTRAINT pk_actions;
 
+--Drop 'meetings' Primary Key
 PROMPT Dropping 'meetings' Primary Key
 ALTER TABLE meetings
 DROP CONSTRAINT pk_meetings;
 
 --DROP TABLES
+
 --Drop 'employee_specialisms' table
 PROMPT Dropping 'employee_specialisms' table
 DROP TABLE employee_specialisms;
