@@ -39,12 +39,12 @@ PRIMARY KEY (action_id);
 -- Creating 'employee_specialisms' Foreign Keys
 PROMPT Foreign Keys 'employee_specialisms' table
 ALTER TABLE employee_specialisms
-ADD CONSTRAINT fk_e_employee_specialisms
+ADD CONSTRAINT fk_es_employees
 FOREIGN KEY (employee_id)
 REFERENCES employees(employee_id);
 
 ALTER TABLE employee_specialisms
-ADD CONSTRAINT fk_s_employee_specialisms
+ADD CONSTRAINT fk_es_specialisms
 FOREIGN KEY (specialism_id)
 REFERENCES specialisms(specialism_id);
 
