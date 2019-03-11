@@ -4,7 +4,13 @@
 */
 
 -- DROP Foreign Keys
+-- Drop 'project_teams' Foreign Keys
+PROMPT Dropping 'project_teams' Foreign Keys
+ALTER TABLE project_teams
+DROP CONSTRAINT fk_pt_employees;
 
+ALTER TABLE project_teams
+DROP CONSTRAINT fk_pt_projects;
 
 
 -- DROP Primary Keys
