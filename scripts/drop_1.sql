@@ -5,9 +5,11 @@
 
 -- DROP Foreign Keys
 PROMPT Dropping 'fk_e_employee_specialisms' Foriegn Keys
+ALTER TABLE employee_specialisms
 DROP CONSTRAINT fk_e_employee_specialisms;
 
-DROP CONSTRAINT fk_e_employee_specialisms;
+ALTER TABLE employee_specialisms
+DROP CONSTRAINT fk_s_employee_specialisms;
 
 -- DROP Primary Keys
 -- Drop 'project_teams' Foreign Keys
