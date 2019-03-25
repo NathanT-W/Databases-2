@@ -43,14 +43,12 @@ project_name VARCHAR2(20) NOT NULL,
 project_aim VARCHAR2(100) NOT NULL,
 project_start DATE NOT NULL,
 project_end DATE NOT NULL,
-project_budget NUMBER(10) NOT NULL,
-resource_id NUMBER(4) NOT NULL);
+project_budget NUMBER(10) NOT NULL);
 
 --Create 'project_resources' table
 PROMPT Creating 'project_resources' table
 CREATE TABLE project_resources(
 project_id NUMBER(8),
-project_requirements VARCHAR2(50) NOT NULL,
 resource_id NUMBER(8) NOT NULL);
 
 --Create 'resources' table
@@ -60,13 +58,6 @@ resource_id NUMBER(8),
 resource_name VARCHAR2(20),
 resource_description VARCHAR2(50),
 resource_cost NUMBER(8));
-
---Create 'project_resources' table
-PROMPT Creating 'project_resources' table
-CREATE TABLE project_resources(
-project_id NUMBER(8),
-project_requirements VARCHAR2(50) NOT NULL,
-resource_id NUMBER(8) NOT NULL);
 
 -- Create 'project_teams' table
 PROMPT Creating 'project_teams' table

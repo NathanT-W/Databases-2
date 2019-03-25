@@ -34,6 +34,21 @@ ALTER TABLE actions
 ADD CONSTRAINT pk_actions
 PRIMARY KEY (action_id);
 
+PROMPT Primary Key 'projects' table
+ALTER TABLE projects
+ADD CONSTRAINT pk_projects
+PRIMARY KEY (project_id);
+
+PROMPT Primary Key 'project_resources' table
+ALTER TABLE project_resources
+ADD CONSTRAINT pk_project_resources
+PRIMARY KEY (project_id, resource_id);
+
+PROMPT Primary Key 'resources' table
+ALTER TABLE resources
+ADD CONSTRAINT pk_resources
+PRIMARY KEY (resource_id);
+
 --CREATE Foreign Keys
 
 -- Creating 'employee_specialisms' Foreign Keys
@@ -59,6 +74,17 @@ ALTER TABLE project_teams
 ADD CONSTRAINT fk_pt_projects
 FOREIGN KEY(project_id)
 REFERENCES projects(project_id);
+
+PROMPT Foreign keys 'project_resources' table
+ALTER TABLE project_resources
+ADD CONSTRAINT fk_pr_resources
+FOREIGN KEY (project_id)
+REFERENCES projects(project_id);
+
+ALTER TABLE project_resources
+ADD CONSTRAINT fk_pr_resources
+FOREIGN KEY (resource_id)
+REFERENCES resources(resource_id);
 
 --CREATE CHECK Constraints
 PROMPT Creating check constraints for the 'employees' table
