@@ -5,7 +5,7 @@
 
 --CREATE TABLES
 --Create 'employees' table
-PROMPT Creating 'employees' table
+PROMPT 'employees' table
 CREATE TABLE employees(
 employee_id NUMBER(8),
 title VARCHAR2(4) NOT NULL,
@@ -23,20 +23,20 @@ postcode VARCHAR2(8) NOT NULL,
 country CHAR(2) NOT NULL);
 
 --Create 'specialisms' table
-PROMPT Creating 'specialisms' table
+PROMPT 'specialisms' table
 CREATE TABLE specialisms(
 specialism_id NUMBER(8),
 name VARCHAR2(20) NOT NULL,
 description VARCHAR2(280) NOT NULL);
 
 --Create 'employee_specialisms' table
-PROMPT Creating 'employee_specialisms' table
+PROMPT 'employee_specialisms' table
 CREATE TABLE employee_specialisms(
 employee_id NUMBER(8) NOT NULL,
 specialism_id NUMBER(8) NOT NULL);
 
 --Create 'projects' table
-PROMPT 'creating projects' table
+PROMPT 'projects' table
 CREATE TABLE projects(
 project_id NUMBER(8),
 project_name VARCHAR2(20) NOT NULL,
@@ -45,35 +45,42 @@ project_start DATE NOT NULL,
 project_end DATE NOT NULL,
 project_budget NUMBER(10) NOT NULL);
 
---Create 'project_resources' table
-PROMPT Creating 'project_resources' table
-CREATE TABLE project_resources(
-project_id NUMBER(8),
-resource_id NUMBER(8) NOT NULL);
+--Create 'project_costs' table
+PROMPT 'project_costs' table
+CREATE TABLE project_costs(
+project_cost NUMBER(8) NOT NULL,
+employee_id NUMBER(8) NOT NULL,
+project_id NUMBER(8) NOT NULL));
 
 --Create 'resources' table
-PROMPT Creating 'resources' table
+PROMPT 'resources' table
 CREATE TABLE resources(
 resource_id NUMBER(8),
 resource_name VARCHAR2(20),
 resource_description VARCHAR2(50),
 resource_cost NUMBER(8));
 
--- Create 'project_teams' table
-PROMPT Creating 'project_teams' table
+--Create 'project_resources' table
+PROMPT 'project_resources' table
+CREATE TABLE project_resources(
+project_id NUMBER(8),
+resource_id NUMBER(8) NOT NULL);
+
+--Create 'project_teams' table
+PROMPT 'project_teams' table
 CREATE TABLE project_teams(
 employee_id NUMBER(8) NOT NULL,
 project_id NUMBER(8) NOT NULL);
 
--- Create 'meetings' table
-PROMPT Creating 'meetings' table
+--Create 'meetings' table
+PROMPT 'meetings' table
 CREATE TABLE meetings(
 meeting_id NUMBER(8),
 team_id NUMBER(13) NOT NULL,
 meeting_date DATE NOT NULL);
 
--- Create 'actions' table
-PROMPT Creating 'actions' table
+--Create 'actions' table
+PROMPT 'actions' table
 CREATE TABLE actions(
 action_id NUMBER(8),
 meeting_id NUMBER(8) NOT NULL,
@@ -81,6 +88,22 @@ project_id NUMBER(8) NOT NULL,
 description VARCHAR2(25),
 owner_id NUMBER(8) NOT NULL,
 deadline DATE NOT NULL);
+
+--Create 'stages' table
+PROMPT 'stages' table
+CREATE TABLE stages(
+stage_id NUMBER(5),
+employee_id NUMBER(8) NOT NULL,
+project_id NUMBER(8) NOT NULL,
+description VARCHAR2(30) NOT NULL,
+date_due DATE NOT NULL));
+
+--Create 'project_stages' table
+PROMPT 'project_stages' table
+CREATE TABLE project_stages(
+project_id NUMBER(8) NOT NULL,
+stage_id NUMBER(8) NOT NULL,
+project_progress NUMBER(2) NOT NULL));
 
 --CREATE SEQUENCES
 --seq_employees
@@ -106,6 +129,12 @@ PROMPT Creating 'seq_actions' sequence
 CREATE SEQUENCE seq_actions
 INCREMENT BY 1
 START WITH 00000001;
+
+--seq_stages
+PROMPT Creating 'seq_stages' sequence
+CREATE SEQUENCE seq_stages
+INCREMENT BY 1
+START WITH 00001;
 
 PROMPT Commit changes
 COMMIT;
