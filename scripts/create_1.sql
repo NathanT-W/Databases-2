@@ -36,15 +36,14 @@ employee_id NUMBER(8) NOT NULL,
 specialism_id NUMBER(8) NOT NULL);
 
 --Create 'projects' table
-PROMPT 'creating projects' table
+PROMPT 'projects' table
 CREATE TABLE projects(
 project_id NUMBER(8),
 project_name VARCHAR2(20) NOT NULL,
 project_aim VARCHAR2(100) NOT NULL,
 project_start DATE NOT NULL,
 project_end DATE NOT NULL,
-project_budget NUMBER(10) NOT NULL,
-resource_id NUMBER(4) NOT NULL);
+project_budget NUMBER(10) NOT NULL);
 
 --Create 'project_costs' table
 PROMPT 'project_costs' table
