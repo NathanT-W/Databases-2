@@ -65,7 +65,6 @@ ADD CONSTRAINT pk_project_costs
 PRIMARY KEY (employee_id, project_id);
 
 --CREATE Foreign Keys
-
 -- Creating 'employee_specialisms' Foreign Keys
 PROMPT Foreign Keys 'employee_specialisms' table
 ALTER TABLE employee_specialisms
