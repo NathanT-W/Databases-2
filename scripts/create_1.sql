@@ -136,5 +136,17 @@ CREATE SEQUENCE seq_stages
 INCREMENT BY 1
 START WITH 00001;
 
+--projects
+PROMPT Creating 'seq_projects' sequence
+CREATE SEQUENCE seq_projects
+INCREMENT BY 1
+START WITH 00000001;
+
+--resources
+PROMPT Creating 'seq_resources' sequence
+CREATE SEQUENCE seq_resources
+INCREMENT BY 1
+START WITH 00000001;
+
 PROMPT Commit changes
 COMMIT;
