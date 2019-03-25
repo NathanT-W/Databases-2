@@ -4,11 +4,12 @@
 */
 
 -- DROP Foreign Keys
+PROMPT Dropping 'fk_e_employee_specialisms' Foriegn Keys
+DROP CONSTRAINT fk_e_employee_specialisms;
 
-
+DROP CONSTRAINT fk_e_employee_specialisms;
 
 -- DROP Primary Keys
-
 PROMPT Dropping 'project_teams' Primary Key
 DROP CONSTRAINT pk_project_teams;
 
@@ -17,6 +18,15 @@ DROP CONSTRAINT pk_actions;
 
 PROMPT Dropping 'meetings' Primary Key
 DROP CONSTRAINT pk_meetings;
+
+PROMPT Dropping 'pk_employees' Primary Key
+DROP CONSTRAINT pk_employees;
+
+PROMPT Dropping 'pk_specialisms' Primary Key
+DROP CONSTRAINT pk_specialisms;
+
+PROMPT Dropping 'pk_employee_specialisms' Primary Key
+DROP CONSTRAINT pk_employee_specialisms;
 
 --DROP TABLES
 --Drop 'employee_specialisms' table
