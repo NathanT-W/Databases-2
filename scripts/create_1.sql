@@ -97,7 +97,6 @@ stage_id NUMBER(5),
 employee_id NUMBER(8) NOT NULL,
 project_id NUMBER(8) NOT NULL,
 description VARCHAR2(30) NOT NULL,
-team_id NUMBER(8) NOT NULL,
 date_due DATE NOT NULL));
 
 --Create 'project_stages' table
