@@ -4,6 +4,12 @@
 */
 
 -- DROP Foreign Keys
+PROMPT Dropping 'fk_e_employee_specialisms' Foriegn Keys
+DROP CONSTRAINT fk_e_employee_specialisms;
+
+DROP CONSTRAINT fk_e_employee_specialisms;
+
+-- DROP Primary Keys
 -- Drop 'project_teams' Foreign Keys
 PROMPT Dropping 'project_teams' Foreign Keys
 ALTER TABLE project_teams
@@ -29,7 +35,6 @@ ALTER TABLE project_stages
 DROP CONSTRAINT pk_ps_projects;
 
 -- DROP Primary Keys
-
 --Drop 'project_teams' Primary Key
 PROMPT Dropping 'project_teams' Primary Key
 ALTER TABLE project_teams
@@ -45,8 +50,16 @@ PROMPT Dropping 'meetings' Primary Key
 ALTER TABLE meetings
 DROP CONSTRAINT pk_meetings;
 
---DROP TABLES
+PROMPT Dropping 'pk_employees' Primary Key
+DROP CONSTRAINT pk_employees;
 
+PROMPT Dropping 'pk_specialisms' Primary Key
+DROP CONSTRAINT pk_specialisms;
+
+PROMPT Dropping 'pk_employee_specialisms' Primary Key
+DROP CONSTRAINT pk_employee_specialisms;
+
+--DROP TABLES
 --Drop 'employee_specialisms' table
 PROMPT Dropping 'employee_specialisms' table
 DROP TABLE employee_specialisms;
