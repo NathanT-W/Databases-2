@@ -35,7 +35,6 @@ ADD CONSTRAINT pk_actions
 PRIMARY KEY (action_id);
 
 --CREATE Foreign Keys
-
 -- Creating 'employee_specialisms' Foreign Keys
 PROMPT Foreign Keys 'employee_specialisms' table
 ALTER TABLE employee_specialisms

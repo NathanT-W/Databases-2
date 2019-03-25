@@ -18,7 +18,6 @@ DROP CONSTRAINT fk_pt_employees;
 ALTER TABLE project_teams
 DROP CONSTRAINT fk_pt_projects;
 
-
 -- DROP Primary Keys
 --Drop 'project_teams' Primary Key
 PROMPT Dropping 'project_teams' Primary Key
@@ -45,7 +44,6 @@ PROMPT Dropping 'pk_employee_specialisms' Primary Key
 DROP CONSTRAINT pk_employee_specialisms;
 
 --DROP TABLES
-
 --Drop 'employee_specialisms' table
 PROMPT Dropping 'employee_specialisms' table
 DROP TABLE employee_specialisms;
