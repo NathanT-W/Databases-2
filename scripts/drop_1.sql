@@ -12,6 +12,21 @@ DROP CONSTRAINT fk_pt_employees;
 ALTER TABLE project_teams
 DROP CONSTRAINT fk_pt_projects;
 
+-- Drop 'project_costs' Foreign Keys
+PROMPT Dropping 'project_costs' Foreign Keys
+ALTER TABLE project_costs
+DROP CONSTRAINT fk_pc_projects;
+
+ALTER TABLE project_costs
+DROP CONSTRAINT fk_pc_employees;
+
+-- Drop 'project_stages' Foreign Keys
+PROMPT Dropping 'project_stages' Foreign Keys
+ALTER TABLE project_stages
+DROP CONSTRAINT pk_ps_stages;
+
+ALTER TABLE project_stages
+DROP CONSTRAINT pk_ps_projects;
 
 -- DROP Primary Keys
 
