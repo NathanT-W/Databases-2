@@ -1,5 +1,5 @@
 /*
-* Alexander Turner (18416709), Aidan Rayner (), Nathan Thomas-Williams (18410399), Nathan Segnitz ()
+* Alexander Turner (18416709), Aidan Rayner (18415915), Nathan Thomas-Williams (18410399), Nathan Segnitz ()
 * CSY1026 Databases 1 - Assignment 2
 */
 
@@ -35,17 +35,30 @@ ADD CONSTRAINT pk_actions
 PRIMARY KEY (action_id);
 
 --CREATE Foreign Keys
+
+-- Creating 'employee_specialisms' Foreign Keys
 PROMPT Foreign Keys 'employee_specialisms' table
 ALTER TABLE employee_specialisms
-ADD CONSTRAINT fk_e_employee_specialisms
+ADD CONSTRAINT fk_es_employees
 FOREIGN KEY (employee_id)
 REFERENCES employees(employee_id);
 
 ALTER TABLE employee_specialisms
-ADD CONSTRAINT fk_s_employee_specialisms
+ADD CONSTRAINT fk_es_specialisms
 FOREIGN KEY (specialism_id)
 REFERENCES specialisms(specialism_id);
 
+-- Creating 'project_teams' Foreign Keys
+PROMPT Foreign Keys 'project_teams' table
+ALTER TABLE project_teams
+ADD CONSTRAINT fk_pt_employees
+FOREIGN KEY(employee_id)
+REFERENCES employees(employee_id);
+
+ALTER TABLE project_teams
+ADD CONSTRAINT fk_pt_projects
+FOREIGN KEY(project_id)
+REFERENCES projects(project_id);
 
 --CREATE CHECK Constraints
 PROMPT Creating check constraints for the 'employees' table

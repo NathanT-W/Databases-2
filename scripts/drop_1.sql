@@ -1,5 +1,5 @@
 /*
-* Alexander Turner (18416709), Aidan Rayner (), Nathan Thomas-Williams (18410399), Nathan Segnitz ()
+* Alexander Turner (18416709), Aidan Rayner (18415915), Nathan Thomas-Williams (18410399), Nathan Segnitz ()
 * CSY1026 Databases 1 - Assignment 2
 */
 
@@ -10,13 +10,29 @@ DROP CONSTRAINT fk_e_employee_specialisms;
 DROP CONSTRAINT fk_e_employee_specialisms;
 
 -- DROP Primary Keys
+-- Drop 'project_teams' Foreign Keys
+PROMPT Dropping 'project_teams' Foreign Keys
+ALTER TABLE project_teams
+DROP CONSTRAINT fk_pt_employees;
+
+ALTER TABLE project_teams
+DROP CONSTRAINT fk_pt_projects;
+
+
+-- DROP Primary Keys
+--Drop 'project_teams' Primary Key
 PROMPT Dropping 'project_teams' Primary Key
+ALTER TABLE project_teams
 DROP CONSTRAINT pk_project_teams;
 
+--Drop 'actions' Primary Key'
 PROMPT Dropping 'actions' Primary Key
+ALTER TABLE actions
 DROP CONSTRAINT pk_actions;
 
+--Drop 'meetings' Primary Key
 PROMPT Dropping 'meetings' Primary Key
+ALTER TABLE meetings
 DROP CONSTRAINT pk_meetings;
 
 PROMPT Dropping 'pk_employees' Primary Key
@@ -29,6 +45,7 @@ PROMPT Dropping 'pk_employee_specialisms' Primary Key
 DROP CONSTRAINT pk_employee_specialisms;
 
 --DROP TABLES
+
 --Drop 'employee_specialisms' table
 PROMPT Dropping 'employee_specialisms' table
 DROP TABLE employee_specialisms;
