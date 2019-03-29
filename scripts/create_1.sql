@@ -1,5 +1,5 @@
 /*
-* Alexander Turner (18416709), Aidan Rayner (18415915), Nathan Thomas-Williams (18410399), Nathan Segnitz ()
+* Alexander Turner (18416709), Aidan Rayner (18415915), Nathan Thomas-Williams (18410399)
 * CSY1026 Databases 1 - Assignment 2
 */
 
@@ -50,7 +50,7 @@ PROMPT 'project_costs' table
 CREATE TABLE project_costs(
 project_cost NUMBER(8) NOT NULL,
 employee_id NUMBER(8) NOT NULL,
-project_id NUMBER(8) NOT NULL));
+project_id NUMBER(8) NOT NULL);
 
 --Create 'resources' table
 PROMPT 'resources' table
@@ -96,14 +96,14 @@ stage_id NUMBER(5),
 employee_id NUMBER(8) NOT NULL,
 project_id NUMBER(8) NOT NULL,
 description VARCHAR2(30) NOT NULL,
-date_due DATE NOT NULL));
+date_due DATE NOT NULL);
 
 --Create 'project_stages' table
 PROMPT 'project_stages' table
 CREATE TABLE project_stages(
 project_id NUMBER(8) NOT NULL,
 stage_id NUMBER(8) NOT NULL,
-project_progress NUMBER(2) NOT NULL));
+project_progress NUMBER(2) NOT NULL);
 
 --CREATE SEQUENCES
 --seq_employees

@@ -3,38 +3,62 @@
 * CSY1026 Databases 1 - Assignment 2
 */
 
+-- DROP Sequences
+
+DROP SEQUENCE seq_actions;
+DROP SEQUENCE seq_employees;
+DROP SEQUENCE seq_meetings;
+DROP SEQUENCE seq_projects;
+DROP SEQUENCE seq_resources;
+DROP SEQUENCE seq_specialisms;
+DROP SEQUENCE seq_stages;
+
+
 -- DROP Foreign Keys
-PROMPT Dropping 'fk_e_employee_specialisms' Foriegn Keys
+
+-- Drop 'employee_specialisms' Foreign Keys
+PROMPT Dropping 'employee_specialisms' Foreign Keys
 ALTER TABLE employee_specialisms
-DROP CONSTRAINT fk_e_employee_specialisms;
+DROP CONSTRAINT fk_es_employees;
 
 ALTER TABLE employee_specialisms
-DROP CONSTRAINT fk_s_employee_specialisms;
+DROP CONSTRAINT fk_es_specialisms;
 
--- DROP Primary Keys
 -- Drop 'project_teams' Foreign Keys
-PROMPT Dropping 'project_teams' Foreign Keys
+
+PROMPT Dropping'project_teams' Foreign Keys
 ALTER TABLE project_teams
 DROP CONSTRAINT fk_pt_employees;
 
 ALTER TABLE project_teams
 DROP CONSTRAINT fk_pt_projects;
 
--- Drop 'project_costs' Foreign Keys
-PROMPT Dropping 'project_costs' Foreign Keys
-ALTER TABLE project_costs
-DROP CONSTRAINT fk_pc_projects;
+-- Drop 'project_resources' Foreign Keys
 
+PROMPT Dropping 'project_resources' Foreign Keys 
+ALTER TABLE project_resources
+DROP CONSTRAINT fk_pr_projects;
+
+ALTER TABLE project_resources
+DROP CONSTRAINT fk_pr_resources;
+
+-- Drop 'project_costs' Foreign Keys
+
+PROMPT Dropping 'project_costs' Foreign Keys
 ALTER TABLE project_costs
 DROP CONSTRAINT fk_pc_employees;
 
+ALTER TABLE project_costs
+DROP CONSTRAINT fk_pc_projects;
+
 -- Drop 'project_stages' Foreign Keys
+
 PROMPT Dropping 'project_stages' Foreign Keys
 ALTER TABLE project_stages
-DROP CONSTRAINT pk_ps_stages;
+DROP CONSTRAINT fk_ps_projects;
 
 ALTER TABLE project_stages
-DROP CONSTRAINT pk_ps_projects;
+DROP CONSTRAINT fk_ps_stages;
 
 -- DROP Primary Keys
 --Drop 'project_teams' Primary Key
@@ -52,14 +76,33 @@ PROMPT Dropping 'meetings' Primary Key
 ALTER TABLE meetings
 DROP CONSTRAINT pk_meetings;
 
+PROMPT Dropping 'pk_projects' Primary Key
+ALTER TABLE projects
+DROP CONSTRAINT pk_projects;
+
 PROMPT Dropping 'pk_employees' Primary Key
+ALTER TABLE employees
 DROP CONSTRAINT pk_employees;
 
 PROMPT Dropping 'pk_specialisms' Primary Key
+ALTER TABLE specialisms
 DROP CONSTRAINT pk_specialisms;
 
 PROMPT Dropping 'pk_employee_specialisms' Primary Key
+ALTER TABLE employee_specialisms
 DROP CONSTRAINT pk_employee_specialisms;
+
+PROMPT Dropping 'pk_stages' Primary Key
+ALTER TABLE stages
+DROP CONSTRAINT pk_stages;
+
+PROMPT Dropping 'pk_project_stages' Primary Key
+ALTER TABLE project_stages
+DROP CONSTRAINT pk_project_stages;
+
+PROMPT Dropping 'pk_project_costs' Primary Key
+ALTER TABLE project_costs
+DROP CONSTRAINT pk_project_costs;
 
 --DROP TABLES
 --Drop 'employee_specialisms' table
@@ -97,6 +140,18 @@ DROP TABLE projects;
 --Drop 'employees' table
 PROMPT Dropping 'employees' table
 DROP TABLE employees;
+
+--Drop 'stages' table
+PROMPT Dropping 'stages' table
+DROP TABLE stages;
+
+--Drop 'project_stages' table
+PROMPT Dropping 'project_stages' table
+DROP TABLE project_stages;
+
+--Drop 'project_costs' table
+PROMPT Dropping 'project_costs' table
+DROP TABLE project_costs;
 
 PROMPT Purge recyclebin
 PURGE RECYCLEBIN;
