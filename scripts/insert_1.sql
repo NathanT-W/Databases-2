@@ -115,5 +115,27 @@ INSERT INTO employee_specialisms
 VALUES(5, 5);
 
 --Commit changes
+
+PROMPT Commit changes
+
+PROMPT Inserting data into the 'project_costs' table
+INSERT INTO project_costs
+VALUES(project_costs, 'Project Cost', '£7,500',)
+
+INSERT INTO project_costs
+VALUES(employee_id.NEXTVAL,)
+
+INSERT INTO project_costs
+VALUES(project_id.NEXTVAL,)
+
+INSERT INTO project_costs
+VALUES('','')
+
+INSERT INTO project_costs
+VALUES('Project Cost', '')
+
+INSERT INTO project_costs
+VALUES('', '£7,500')
+
 PROMPT Commit changes
 COMMIT;
