@@ -89,9 +89,11 @@ ADD CONSTRAINT fk_pt_projects
 FOREIGN KEY(project_id)
 REFERENCES projects(project_id);
 
+-- Creating 'project_resources' Foreign Keys
+
 PROMPT Foreign keys 'project_resources' table
 ALTER TABLE project_resources
-ADD CONSTRAINT fk_pr_resources
+ADD CONSTRAINT fk_pr_projects
 FOREIGN KEY (project_id)
 REFERENCES projects(project_id);
 
@@ -101,6 +103,7 @@ FOREIGN KEY (resource_id)
 REFERENCES resources(resource_id);
 
 -- Creating 'project_costs' Foreign Keys
+
 PROMPT Foreign Keys 'project_costs' table
 ALTER TABLE project_costs
 ADD CONSTRAINT fk_pc_employees
@@ -113,6 +116,7 @@ FOREIGN KEY(project_id)
 REFERENCES projects(project_id);
 
 -- Creating 'project_stages' Foreign Keys
+
 PROMPT Foreign Keys 'project_stages' table
 ALTER TABLE project_stages
 ADD CONSTRAINT fk_ps_projects
@@ -135,10 +139,13 @@ ADD CONSTRAINT ck_firstname
 CHECK (firstname = UPPER(firstname));
 
 ALTER TABLE employees
+<<<<<<< HEAD
 ADD CONSTRAINT ck_surname
 CHECK (surname = UPPER(surname));
 
 ALTER TABLE employees
+=======
+>>>>>>> 229ca1726f86665509e784ebc4dc993234db5282
 ADD CONSTRAINT ck_streetname
 CHECK (streetname = UPPER(streetname));
 
