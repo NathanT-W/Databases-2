@@ -78,33 +78,41 @@ PROMPT Dropping 'meetings' Primary Key
 ALTER TABLE meetings
 DROP CONSTRAINT pk_meetings;
 
-PROMPT Dropping 'pk_projects' Primary Key
+PROMPT Dropping 'Projects' Primary Key
 ALTER TABLE projects
 DROP CONSTRAINT pk_projects;
 
-PROMPT Dropping 'pk_employees' Primary Key
+PROMPT Dropping 'Employees' Primary Key
 ALTER TABLE employees
 DROP CONSTRAINT pk_employees;
 
-PROMPT Dropping 'pk_specialisms' Primary Key
+PROMPT Dropping 'Specialisms' Primary Key
 ALTER TABLE specialisms
 DROP CONSTRAINT pk_specialisms;
 
-PROMPT Dropping 'pk_employee_specialisms' Primary Key
+PROMPT Dropping 'Employee_specialisms' Primary Key
 ALTER TABLE employee_specialisms
 DROP CONSTRAINT pk_employee_specialisms;
 
-PROMPT Dropping 'pk_stages' Primary Key
+PROMPT Dropping 'Stages' Primary Key
 ALTER TABLE stages
 DROP CONSTRAINT pk_stages;
 
-PROMPT Dropping 'pk_project_stages' Primary Key
+PROMPT Dropping 'Project_stages' Primary Key
 ALTER TABLE project_stages
 DROP CONSTRAINT pk_project_stages;
 
-PROMPT Dropping 'pk_project_costs' Primary Key
+PROMPT Dropping 'Project_costs' Primary Key
 ALTER TABLE project_costs
 DROP CONSTRAINT pk_project_costs;
+
+PROMPT Dropping 'Project_resources' Primary Key
+ALTER TABLE project_resources
+DROP CONSTRAINT pk_project_resources;
+
+PROMPT Dropping 'Resources' Primary Key
+ALTER TABLE resources
+DROP CONSTRAINT pk_resources;
 
 --DROP TABLES
 --Drop 'employee_specialisms' table
