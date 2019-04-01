@@ -1,5 +1,5 @@
 /*
-* Alexander Turner (18416709), Aidan Rayner (18415915), Nathan Thomas-Williams (18410399)
+* Alexander Turner (18416709), Aidan Rayner (18415915), Nathan Thomas-Williams (18410399), Nathan Segnitz (18412790)
 * CSY1026 Databases 1 - Assignment 2
 */
 
@@ -136,6 +136,38 @@ VALUES('Project Cost', '')
 
 INSERT INTO project_costs
 VALUES('', '£7,500')
+
+PROMPT Inserting data into the 'project_stages' table
+INSERT INTO project_stages
+VALUES(project_id.NEXTVAL)
+
+INSERT INTO project_stages
+VALUES(stage_id.NEXTVAL)
+
+INSERT INTO project_stages
+VALUES('Project Progress', '75')
+
+INSERT INTO project_stages
+VALUES(NULL, NULL)
+
+INSERT INTO project_stages
+VALUES('Project Progress', NULL)
+
+INSERT INTO project_stages
+VALUES(NULL, '75')
+
+PROMPT Inserting data into the 'stages' table
+INSERT INTO stages
+VALUES(stage_id.NEXTVAL)
+
+INSERT INTO stages
+VALUES('Design', 'This is the part where the developers design the layout for the database including each of the primary and foriegn keys')
+
+INSERT INTO stages
+VALUES('Creating the database', 'This is the part where the developers create the database, setup all the constraints, the primary and foriegn key')
+
+INSERT INTO stages
+VALUES('Date Due', '22/04/19')
 
 PROMPT Commit changes
 COMMIT;
