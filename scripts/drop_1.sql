@@ -15,7 +15,6 @@ DROP SEQUENCE seq_resources;
 DROP SEQUENCE seq_specialisms;
 DROP SEQUENCE seq_stages;
 
-
 -- DROP Foreign Keys
 
 -- Drop 'employee_specialisms' Foreign Keys
@@ -27,7 +26,6 @@ ALTER TABLE employee_specialisms
 DROP CONSTRAINT fk_es_specialisms;
 
 -- Drop 'project_teams' Foreign Keys
-
 PROMPT Dropping'project_teams' Foreign Keys
 ALTER TABLE project_teams
 DROP CONSTRAINT fk_pt_employees;
@@ -36,7 +34,6 @@ ALTER TABLE project_teams
 DROP CONSTRAINT fk_pt_projects;
 
 -- Drop 'project_resources' Foreign Keys
-
 PROMPT Dropping 'project_resources' Foreign Keys 
 ALTER TABLE project_resources
 DROP CONSTRAINT fk_pr_projects;
@@ -45,7 +42,6 @@ ALTER TABLE project_resources
 DROP CONSTRAINT fk_pr_resources;
 
 -- Drop 'project_costs' Foreign Keys
-
 PROMPT Dropping 'project_costs' Foreign Keys
 ALTER TABLE project_costs
 DROP CONSTRAINT fk_pc_employees;
@@ -54,7 +50,6 @@ ALTER TABLE project_costs
 DROP CONSTRAINT fk_pc_projects;
 
 -- Drop 'project_stages' Foreign Keys
-
 PROMPT Dropping 'project_stages' Foreign Keys
 ALTER TABLE project_stages
 DROP CONSTRAINT fk_ps_projects;
