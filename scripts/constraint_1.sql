@@ -139,13 +139,10 @@ ADD CONSTRAINT ck_firstname
 CHECK (firstname = UPPER(firstname));
 
 ALTER TABLE employees
-<<<<<<< HEAD
 ADD CONSTRAINT ck_surname
 CHECK (surname = UPPER(surname));
 
 ALTER TABLE employees
-=======
->>>>>>> 229ca1726f86665509e784ebc4dc993234db5282
 ADD CONSTRAINT ck_streetname
 CHECK (streetname = UPPER(streetname));
 

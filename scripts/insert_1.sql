@@ -5,7 +5,7 @@
 
 --INSERT INTO TABLES
 PROMPT Inserting data into the 'employees' table
---Inserting data
+--Inserting properly formatted data
 INSERT INTO employees 
 VALUES(seq_employees.NEXTVAL, 'MR', 'JOHN', 'DOE', 'M', 'JOHN@DOE.COM', '01234567899', '99876543210', '101', 'RANDOM STREET', 'NORTHAMPTON', 'NORTHAMPTONSHIRE', 'NN15PH', 'GB');
 
@@ -21,7 +21,7 @@ VALUES(seq_employees.NEXTVAL, 'MR', 'BRUCE', 'BANNER', 'M', 'BRUCE@THEHULK.COM',
 INSERT INTO employees 
 VALUES(seq_employees.NEXTVAL, 'MR', 'STEVE', 'ROGERS', 'M', 'STEVE@CAPTAINAMERICA.COM', '01234567899', '99876543210', '101', 'RANDOM STREET', 'NORTHAMPTON', 'NORTHAMPTONSHIRE', 'NN15PH', 'GB');
 
---Inserting nulls
+--Testing NOT NULL constraints
 INSERT INTO employees 
 VALUES('', '', '', '', '', '', '', '', '', '', '', '', '', '');
 
@@ -64,7 +64,7 @@ VALUES(seq_employees.NEXTVAL, 'MRS', 'CAROL', 'DANVERS', 'F', 'CAROL@CAPTAINMARV
 INSERT INTO employees 
 VALUES(seq_employees.NEXTVAL, 'MRS', 'CAROL', 'DANVERS', 'F', 'CAROL@CAPTAINMARVEL.COM', '01234567899', '99876543210', '101', 'RANDOM STREET', 'NORTHAMPTON', 'NORTHAMPTONSHIRE', 'NN15PH', '');
 
---Inserting values with a different case
+--Testing CHECK constraints
 INSERT INTO employees 
 VALUES(seq_employees.NEXTVAL, 'MRS', 'CAROL', 'DANVERS', 'F', 'carol@captainmarvel.com', '01234567899', '99876543210', '101', 'RANDOM STREET', 'NORTHAMPTON', 'NORTHAMPTONSHIRE', 'NN15PH', 'GB');
 
@@ -74,17 +74,12 @@ VALUES(seq_employees.NEXTVAL, 'MRS', 'carol', 'DANVERS', 'F', 'CAROL@CAPTAINMARV
 INSERT INTO employees 
 VALUES(seq_employees.NEXTVAL, 'MRS', 'CAROL', 'DANVERS', 'F', 'CAROL@CAPTAINMARVEL.COM', '01234567899', '99876543210', '101', 'RANDOM STREET', 'NORTHAMPTON', 'northamptonshire', 'NN15PH', 'GB');
 
-
---Testing default values
-
-
-
+--Testing DEFAULT values
+INSERT INTO employees (employee_id, firstname, surname, email, home_number, mobile_number, house_no, streetname)
+VALUES (seq_employees.NEXTVAL, 'JOHN', 'DOE', 'JOHN@DOE.COM', '01234567891', '0123456789', '300', 'STREET NAME');
 
 
 PROMPT Inserting data into the 'specialisms' table
-INSERT INTO specialisms 
-VALUES(seq_specialisms.NEXTVAL);
-
 INSERT INTO specialisms 
 VALUES(seq_specialisms.NEXTVAL, 'Project Manager', 'A person that is experienced in managing various aspects of a project.');
 
@@ -100,5 +95,23 @@ VALUES(seq_specialisms.NEXTVAL, 'Computer Programmer', 'A person that is experie
 INSERT INTO specialisms 
 VALUES(seq_specialisms.NEXTVAL, 'Marketing Assistant', 'A person that is experienced in producing marketing materials (E.g. advertisements, social media posts) for a company.');
 
+
+PROMPT Inserting data into the 'employee_specialisms' table
+INSERT INTO employee_specialisms
+VALUES(1, 1);
+
+INSERT INTO employee_specialisms
+VALUES(2, 2);
+
+INSERT INTO employee_specialisms
+VALUES(3, 4);
+
+INSERT INTO employee_specialisms
+VALUES(4, 3);
+
+INSERT INTO employee_specialisms
+VALUES(5, 5);
+
+--Commit changes
 PROMPT Commit changes
 COMMIT;

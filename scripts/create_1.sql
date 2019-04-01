@@ -22,6 +22,26 @@ county VARCHAR2(20) NOT NULL,
 postcode VARCHAR2(8) NOT NULL,
 country CHAR(2) NOT NULL);
 
+--Add default values to 'employees' table
+PROMPT Default values for 'employees'
+ALTER TABLE employees
+MODIFY title DEFAULT 'MR';
+
+ALTER TABLE employees
+MODIFY gender DEFAULT 'M';
+
+ALTER TABLE employees
+MODIFY city DEFAULT 'NORTHAMPTON';
+
+ALTER TABLE employees
+MODIFY county DEFAULT 'NORTHAMPTONSHIRE';
+
+ALTER TABLE employees
+MODIFY postcode DEFAULT 'NN1 5PH';
+
+ALTER TABLE employees
+MODIFY country DEFAULT 'GB';
+
 --Create 'specialisms' table
 PROMPT 'specialisms' table
 CREATE TABLE specialisms(
