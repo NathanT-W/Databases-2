@@ -115,8 +115,6 @@ deadline DATE NOT NULL);
 PROMPT 'stages' table
 CREATE TABLE stages(
 stage_id NUMBER(5),
-employee_id NUMBER(8) NOT NULL,
-project_id NUMBER(8) NOT NULL,
 description VARCHAR2(30) NOT NULL,
 date_due DATE NOT NULL);
 
@@ -158,13 +156,13 @@ CREATE SEQUENCE seq_stages
 INCREMENT BY 1
 START WITH 00001;
 
---projects
+--seq_projects
 PROMPT Creating 'seq_projects' sequence
 CREATE SEQUENCE seq_projects
 INCREMENT BY 1
 START WITH 00000001;
 
---resources
+--seq_resources
 PROMPT Creating 'seq_resources' sequence
 CREATE SEQUENCE seq_resources
 INCREMENT BY 1
