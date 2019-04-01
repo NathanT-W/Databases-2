@@ -5,5 +5,8 @@
 
 -- @C:\Users\natht\Documents\GitHub\Databases-2\scripts\queries_1.sql
 
+--Viewing all records in the 'employees' table
+SELECT * FROM employees;
+
 PROMPT Commit changes
 COMMIT;
