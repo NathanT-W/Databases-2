@@ -92,7 +92,6 @@ FOREIGN KEY(project_id)
 REFERENCES projects(project_id);
 
 -- Creating 'project_resources' Foreign Keys
-
 PROMPT Foreign keys 'project_resources' table
 ALTER TABLE project_resources
 ADD CONSTRAINT fk_pr_projects
@@ -105,7 +104,6 @@ FOREIGN KEY (resource_id)
 REFERENCES resources(resource_id);
 
 -- Creating 'project_costs' Foreign Keys
-
 PROMPT Foreign Keys 'project_costs' table
 ALTER TABLE project_costs
 ADD CONSTRAINT fk_pc_employees
@@ -118,7 +116,6 @@ FOREIGN KEY(project_id)
 REFERENCES projects(project_id);
 
 -- Creating 'project_stages' Foreign Keys
-
 PROMPT Foreign Keys 'project_stages' table
 ALTER TABLE project_stages
 ADD CONSTRAINT fk_ps_projects
@@ -129,6 +126,30 @@ ALTER TABLE project_stages
 ADD CONSTRAINT fk_ps_stages
 FOREIGN KEY(stage_id)
 REFERENCES stages(stage_id);
+
+-- Creating 'meeting' Foreign Keys
+PROMPT Foreign Keys 'meetings' table
+ALTER TABLE meetings
+ADD CONSTRAINT fk_m_teams
+FOREIGN KEY(team_id)
+REFERENCES teams(team_id);
+
+-- Creating 'actions' Foreign Keys
+PROMPT Foreign Keys 'actions' table
+ALTER TABLE actions
+ADD CONSTRAINT fk_a_meetings
+FOREIGN KEY(meeting_id)
+REFERENCES meetings(meeting_id);
+
+ALTER TABLE actions
+ADD CONSTRAINT fk_a_projects
+FOREIGN KEY(project_id)
+REFERENCES projects(project_id);
+
+ALTER TABLE actions
+ADD CONSTRAINT fk_a_employees
+FOREIGN KEY(owner_id)
+REFERENCES employees(employee_id);
 
 --CREATE CHECK Constraints
 PROMPT Creating check constraints for the 'employees' table
