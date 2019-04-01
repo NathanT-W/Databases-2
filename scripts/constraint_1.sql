@@ -131,20 +131,20 @@ ADD CONSTRAINT ck_title
 CHECK (title = UPPER(title));
 
 ALTER TABLE employees
+ADD CONSTRAINT ck_firstname
+CHECK (firstname = UPPER(firstname));
+
+ALTER TABLE employees
 ADD CONSTRAINT ck_surname
 CHECK (surname = UPPER(surname));
 
 ALTER TABLE employees
-ADD CONSTRAINT ck_firstname
-CHECK (firstname = UPPER(firstname));
-
-ALTER TABLE employees
-ADD CONSTRAINT ck_firstname
-CHECK (firstname = UPPER(firstname));
-
-ALTER TABLE employees
 ADD CONSTRAINT ck_streetname
 CHECK (streetname = UPPER(streetname));
+
+ALTER TABLE employees
+ADD CONSTRAINT ck_email
+CHECK (email = UPPER(email));
 
 ALTER TABLE employees
 ADD CONSTRAINT ck_city
