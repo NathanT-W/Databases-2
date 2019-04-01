@@ -3,6 +3,8 @@
 * CSY1026 Databases 1 - Assignment 2
 */
 
+-- @C:\Users\natht\Documents\GitHub\Databases-2\scripts\create_1.sql
+
 --CREATE TABLES
 --Create 'employees' table
 PROMPT 'employees' table
@@ -56,9 +58,9 @@ project_id NUMBER(8) NOT NULL);
 PROMPT 'resources' table
 CREATE TABLE resources(
 resource_id NUMBER(8),
-resource_name VARCHAR2(20),
-resource_description VARCHAR2(50),
-resource_cost NUMBER(8));
+resource_name VARCHAR2(20) NOT NULL,
+resource_description VARCHAR2(50) NOT NULL,
+resource_cost NUMBER(8) NOT NULL);
 
 --Create 'project_resources' table
 PROMPT 'project_resources' table
