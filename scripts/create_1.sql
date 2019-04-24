@@ -70,7 +70,7 @@ resource_id NUMBER(8) NOT NULL);
 --Create 'project_teams' table
 PROMPT 'project_teams' table
 CREATE TABLE project_teams(
-team_id NUMER(8) NOT NULL,
+team_id NUMBER(8) NOT NULL,
 employee_id NUMBER(8) NOT NULL,
 project_id NUMBER(8) NOT NULL);
 
@@ -78,7 +78,9 @@ project_id NUMBER(8) NOT NULL);
 PROMPT 'stages' table
 CREATE TABLE stages(
 stage_id NUMBER(5),
-description VARCHAR2(30) NOT NULL,);
+description VARCHAR2(30) NOT NULL,
+start_date DATE NOT NULL,
+end_date DATE NOT NULL);
 
 --Create 'project_stages' table
 PROMPT 'project_stages' table

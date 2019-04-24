@@ -226,19 +226,19 @@ PROMPT Inserting data into the 'stages' table
 --Inserting properly formatted data
 
 INSERT INTO stages
-VALUES(seq_stages.NEXTVAL, 'Initial Concept Design');
+VALUES(seq_stages.NEXTVAL, 'Initial Concept Design', '24-APR-2019', '24-MAY-2019');
 
 INSERT INTO stages
-VALUES(seq_stages.NEXTVAL, 'Final Concept Design');
+VALUES(seq_stages.NEXTVAL, 'Final Concept Design', '24-MAY-2019', '24-JUN-2019');
 
 INSERT INTO stages
-VALUES(seq_stages.NEXTVAL, 'Initial Prototype');
+VALUES(seq_stages.NEXTVAL, 'Initial Prototype', '24-JUN-2019', '24-JUL-2019');
 
 INSERT INTO stages
-VALUES(seq_stages.NEXTVAL, 'Final Prototype');
+VALUES(seq_stages.NEXTVAL, 'Final Prototype', '24-JUL-2019', '24-AUG-2019');
 
 INSERT INTO stages
-VALUES(seq_stages.NEXTVAL, 'Final Build');
+VALUES(seq_stages.NEXTVAL, 'Final Build', '24-AUG-2019', '24-SEP-2019');
 
 PROMPT Inserting data into the 'project_stages' table
 
