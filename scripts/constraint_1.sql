@@ -21,10 +21,25 @@ ALTER TABLE employee_specialisms
 ADD CONSTRAINT pk_employee_specialisms
 PRIMARY KEY (employee_id, specialism_id);
 
+PROMPT Primary Key 'projects' table
+ALTER TABLE projects
+ADD CONSTRAINT pk_projects
+PRIMARY KEY (project_id);
+
 PROMPT Primary Key 'project_teams' table
 ALTER TABLE project_teams
 ADD CONSTRAINT pk_project_teams
 PRIMARY KEY(team_id);
+
+PROMPT Primary Key 'meetings' table
+ALTER TABLE meetings
+ADD CONSTRAINT pk_meetings
+PRIMARY KEY (meeting_id);
+
+PROMPT Primary Key 'actions' table
+ALTER TABLE actions
+ADD CONSTRAINT pk_actions
+PRIMARY KEY (action_id);
 
 PROMPT Primary Key 'projects' table
 ALTER TABLE projects
