@@ -78,7 +78,9 @@ project_id NUMBER(8) NOT NULL);
 PROMPT 'stages' table
 CREATE TABLE stages(
 stage_id NUMBER(5),
-description VARCHAR2(30) NOT NULL,);
+description VARCHAR2(30) NOT NULL,
+start_date DATE NOT NULL,
+end_date DATE NOT NULL);
 
 --Create 'project_stages' table
 PROMPT 'project_stages' table
