@@ -116,24 +116,6 @@ VALUES(4, 3);
 
 INSERT INTO employee_specialisms
 VALUES(5, 5);
-PROMPT Inserting data into the 'meetings' table
-
---Inserting properly formatted data
-
-INSERT INTO meetings
-VALUES(seq_meetings.NEXTVAL, 0000000100000001, 0000100000001, '24-APR-2019');
-
-INSERT INTO meetings
-VALUES(seq_meetings.NEXTVAL, 0000000200000001, 0000100000002, '23-JAN-2019');
-
-INSERT INTO meetings
-VALUES(seq_meetings.NEXTVAL, 0000000300000004, 0000200000003, '15-FEB-2019');
-
-INSERT INTO meetings
-VALUES(seq_meetings.NEXTVAL, 0000000200000002, 0000100000005, '29-MAR-2019');
-
-INSERT INTO meetings
-VALUES(seq_meetings.NEXTVAL, 0000000400000005, 0000300000004, '19-JAN-2019');
 
 PROMPT Inserting data into the 'project_costs' table
 
@@ -191,6 +173,44 @@ VALUES(00000004, 00003);
 
 INSERT INTO project_stages
 VALUES(00000005, 00005);
+
+PROMPT Inserting data into the 'meetings' table
+
+--Inserting properly formatted data
+
+INSERT INTO meetings
+VALUES(seq_meetings.NEXTVAL, 00000001, 0000100000001, '24-APR-2019');
+
+INSERT INTO meetings
+VALUES(seq_meetings.NEXTVAL, 00000002, 0000100000002, '23-JAN-2019');
+
+INSERT INTO meetings
+VALUES(seq_meetings.NEXTVAL, 00000003, 0000200000003, '15-FEB-2019');
+
+INSERT INTO meetings
+VALUES(seq_meetings.NEXTVAL, 00000002, 0000100000005, '29-MAR-2019');
+
+INSERT INTO meetings
+VALUES(seq_meetings.NEXTVAL, 00000004, 0000300000004, '19-JAN-2019');
+
+PROMPT Inserting data into the 'actions' table
+
+--Inserting properly formatted data
+
+INSERT INTO actions
+VALUES(seq_actions.NEXTVAL, 00000001, 'Decided to increase project budget', 00000003, '04-MAY-2019');
+
+INSERT INTO actions
+VALUES(seq_actions.NEXTVAL, 00000002, 'Decided to decrease project budget', 00000004, '25-JAN-2019');
+
+INSERT INTO actions
+VALUES(seq_actions.NEXTVAL, 00000003, 'Decided to repaint road lines', 00000005, '15-MAR-2019');
+
+INSERT INTO actions
+VALUES(seq_actions.NEXTVAL, 00000004, 'Decided to rearrange office', 00000001, '05-MAY-2019');
+
+INSERT INTO actions
+VALUES(seq_actions.NEXTVAL, 00000005, 'Decided to increase storage capacity', 00000002, '07-JUL-2019');
 
 --Commit changes
 
