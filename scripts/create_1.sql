@@ -64,8 +64,7 @@ project_id NUMBER(8),
 project_name VARCHAR2(20) NOT NULL,
 project_aim VARCHAR2(100) NOT NULL,
 project_start DATE NOT NULL,
-project_end DATE NOT NULL,
-project_budget NUMBER(10) NOT NULL);
+project_end DATE NOT NULL);
 
 --Create 'project_costs' table
 PROMPT 'project_costs' table
