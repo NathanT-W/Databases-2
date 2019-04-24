@@ -156,6 +156,17 @@ PROMPT Inserting data into the 'project_teams' table
 INSERT INTO project_teams
 VALUES(seq_teams.NEXTVAL, 00000003, 00000001);
 
+INSERT INTO project_teams
+VALUES (seq_teams.CURRVAL, 00000002, 00000001);
+
+INSERT INTO project_teams
+VALUES (seq_teams.CURRVAL, 00000001, 00000001);
+
+INSERT INTO project_teams
+VALUES (seq_teams.NEXTVAL, 00000005, 00000002);
+
+INSERT INTO project_teams
+VALUES (seq_teams.CURRVAL, 00000004, 00000002);
 
 PROMPT Inserting data into the 'project_costs' table
 
@@ -250,7 +261,7 @@ INSERT INTO actions
 VALUES(seq_actions.NEXTVAL, 00000004, 'Decided to rearrange office', 00000001, '05-MAY-2019');
 
 INSERT INTO actions
-VALUES(seq_actions.NEXTVAL, 00000005, 'Decided to increase storage capacity', 00000002, '07-JUL-2019');
+VALUES(seq_actions.NEXTVAL, 00000001, 'Decided to increase storage capacity of building', 00000002, '07-JUL-2019');
 
 --Commit changes
 
