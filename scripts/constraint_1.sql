@@ -1,5 +1,5 @@
 /*
-* Alexander Turner (18416709), Aidan Rayner (18415915), Nathan Thomas-Williams (18410399), Nathan Segnitz (18412790)
+* Alexander Turner (18416709), Aidan Rayner (18415915), Nathan Thomas-Williams (18410399)
 * CSY1026 Databases 1 - Assignment 2
 */
 

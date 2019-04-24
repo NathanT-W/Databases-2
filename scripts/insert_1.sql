@@ -1,12 +1,14 @@
 /*
-* Alexander Turner (18416709), Aidan Rayner (18415915), Nathan Thomas-Williams (18410399), Nathan Segnitz (18412790)
+* Alexander Turner (18416709), Aidan Rayner (18415915), Nathan Thomas-Williams (18410399)
 * CSY1026 Databases 1 - Assignment 2
 */
 
 -- @C:\Users\natht\Documents\GitHub\Databases-2\scripts\insert_1.sql
 
 --INSERT INTO TABLES
+
 PROMPT Inserting data into the 'employees' table
+
 --Inserting properly formatted data
 INSERT INTO employees 
 VALUES(seq_employees.NEXTVAL, 'MR', 'JOHN', 'DOE', 'M', 'JOHN@DOE.COM', '01234567899', '99876543210', '101', 'RANDOM STREET', 'NORTHAMPTON', 'NORTHAMPTONSHIRE', 'NN15PH', 'GB');
@@ -80,7 +82,6 @@ VALUES(seq_employees.NEXTVAL, 'MRS', 'CAROL', 'DANVERS', 'F', 'CAROL@CAPTAINMARV
 INSERT INTO employees (employee_id, firstname, surname, email, home_number, mobile_number, house_no, streetname)
 VALUES (seq_employees.NEXTVAL, 'JOHN', 'DOE', 'JOHN@DOE.COM', '01234567891', '0123456789', '300', 'STREET NAME');
 
-
 PROMPT Inserting data into the 'specialisms' table
 INSERT INTO specialisms 
 VALUES(seq_specialisms.NEXTVAL, 'Project Manager', 'A person that is experienced in managing various aspects of a project.');
@@ -99,6 +100,7 @@ VALUES(seq_specialisms.NEXTVAL, 'Marketing Assistant', 'A person that is experie
 
 
 PROMPT Inserting data into the 'employee_specialisms' table
+
 INSERT INTO employee_specialisms
 VALUES(1, 1);
 
@@ -114,60 +116,64 @@ VALUES(4, 3);
 INSERT INTO employee_specialisms
 VALUES(5, 5);
 
---Commit changes
-
-PROMPT Commit changes
-
 PROMPT Inserting data into the 'project_costs' table
-INSERT INTO project_costs
-VALUES(project_costs, 'Project Cost', '£7,500',)
+
+--Inserting properly formatted data
 
 INSERT INTO project_costs
-VALUES(employee_id.NEXTVAL,)
+VALUES(750000.00, 00000001, 00000001);
 
 INSERT INTO project_costs
-VALUES(project_id.NEXTVAL,)
+VALUES(850045.00, 00000002, 00000002);
 
 INSERT INTO project_costs
-VALUES('','')
+VALUES(632535.64, 00000003, 00000003);
 
 INSERT INTO project_costs
-VALUES('Project Cost', '')
+VALUES(148507.07, 00000004, 00000004);
 
 INSERT INTO project_costs
-VALUES('', '£7,500')
-
-PROMPT Inserting data into the 'project_stages' table
-INSERT INTO project_stages
-VALUES(project_id.NEXTVAL)
-
-INSERT INTO project_stages
-VALUES(stage_id.NEXTVAL)
-
-INSERT INTO project_stages
-VALUES('Project Progress', '75')
-
-INSERT INTO project_stages
-VALUES(NULL, NULL)
-
-INSERT INTO project_stages
-VALUES('Project Progress', NULL)
-
-INSERT INTO project_stages
-VALUES(NULL, '75')
+VALUES(750025.00, 00000005, 00000005);
 
 PROMPT Inserting data into the 'stages' table
-INSERT INTO stages
-VALUES(stage_id.NEXTVAL)
+
+--Inserting properly formatted data
 
 INSERT INTO stages
-VALUES('Design', 'This is the part where the developers design the layout for the database including each of the primary and foriegn keys')
+VALUES(seq_stages.NEXTVAL, 'Initial Concept Design');
 
 INSERT INTO stages
-VALUES('Creating the database', 'This is the part where the developers create the database, setup all the constraints, the primary and foriegn key')
+VALUES(seq_stages.NEXTVAL, 'Final Concept Design');
 
 INSERT INTO stages
-VALUES('Date Due', '22/04/19')
+VALUES(seq_stages.NEXTVAL, 'Initial Prototype');
+
+INSERT INTO stages
+VALUES(seq_stages.NEXTVAL, 'Final Prototype');
+
+INSERT INTO stages
+VALUES(seq_stages.NEXTVAL, 'Final Build');
+
+PROMPT Inserting data into the 'project_stages' table
+
+--Inserting properly formatted data
+
+INSERT INTO project_stages
+VALUES(00000001, 00001, 10);
+
+INSERT INTO project_stages
+VALUES(00000001, 00002, 03);
+
+INSERT INTO project_stages
+VALUES(00000002, 00004, 07);
+
+INSERT INTO project_stages
+VALUES(00000004, 00003, 01);
+
+INSERT INTO project_stages
+VALUES(00000005, 00005, 09);
+
+--Commit changes
 
 PROMPT Commit changes
 COMMIT;
