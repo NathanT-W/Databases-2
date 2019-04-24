@@ -64,14 +64,13 @@ project_id NUMBER(8),
 project_name VARCHAR2(20) NOT NULL,
 project_aim VARCHAR2(100) NOT NULL,
 project_start DATE NOT NULL,
-project_end DATE NOT NULL,
-project_budget NUMBER(10) NOT NULL);
+project_end DATE NOT NULL);
 
 --Create 'project_costs' table
 PROMPT 'project_costs' table
 CREATE TABLE project_costs(
+cost_id NUMBER(8),
 project_cost NUMBER(6,2) NOT NULL,
-employee_id NUMBER(8) NOT NULL,
 project_id NUMBER(8) NOT NULL);
 
 --Create 'resources' table
@@ -94,20 +93,12 @@ CREATE TABLE project_teams(
 employee_id NUMBER(8) NOT NULL,
 project_id NUMBER(8) NOT NULL);
 
---Create 'meetings' table
-PROMPT 'meetings' table
-CREATE TABLE meetings(
-meeting_id NUMBER(8),
-team_id NUMBER(13) NOT NULL,
-meeting_date DATE NOT NULL);
-
 --Create 'actions' table
 PROMPT 'actions' table
 CREATE TABLE actions(
 action_id NUMBER(8),
 meeting_id NUMBER(8) NOT NULL,
-project_id NUMBER(8) NOT NULL,
-description VARCHAR2(25),
+description VARCHAR2(25) NOT NULL,
 owner_id NUMBER(8) NOT NULL,
 deadline DATE NOT NULL);
 
@@ -121,8 +112,15 @@ description VARCHAR2(30) NOT NULL,);
 PROMPT 'project_stages' table
 CREATE TABLE project_stages(
 project_id NUMBER(8) NOT NULL,
-stage_id NUMBER(5) NOT NULL,
-project_progress NUMBER(2) NOT NULL);
+stage_id NUMBER(5) NOT NULL);
+
+--Create 'meetings' table
+PROMPT 'meetings' table
+CREATE TABLE meetings(
+meeting_id NUMBER(8),
+team_id NUMBER(13) NOT NULL,
+project_stage_id NUMBER(13) NOT NULL,
+meeting_date DATE NOT NULL);
 
 --CREATE SEQUENCES
 --seq_employees
@@ -164,6 +162,12 @@ START WITH 00000001;
 --seq_resources
 PROMPT Creating 'seq_resources' sequence
 CREATE SEQUENCE seq_resources
+INCREMENT BY 1
+START WITH 00000001;
+
+--seq_costs
+PROMPT Creating 'seq_costs' sequence
+CREATE SEQUENCE seq_costs
 INCREMENT BY 1
 START WITH 00000001;
 
