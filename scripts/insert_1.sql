@@ -149,6 +149,40 @@ VALUES (seq_projects.NEXTVAL, 'Printer installation','Installation of new fleet 
 INSERT INTO projects
 VALUES (seq_projects.NEXTVAL, 'Office Supplies','Ordering and storing more office supplies (paper, pens, etc.)','1-DEC-2019','5-DEC-2019');
 
+PROMPT Inserting data into 'project_resources' table
+
+INSERT INTO project_resources
+VALUES (00000001,00000001);
+
+INSERT INTO project_resources
+VALUES (00000002,00000002);
+
+INSERT INTO project_resources
+VALUES (00000003,00000003);
+
+INSERT INTO project_resources
+VALUES (00000004,00000004);
+
+INSERT INTO project_resources
+VALUES (00000005,00000005);
+
+PROMPT Inserting data into 'resources' table
+
+INSERT INTO resources
+VALUES(seq_resources.NEXTVAL,'Printer Paper','Paper for the printers. 500 ream pack, 1 each.','0002.50');
+
+INSERT INTO resources
+VALUES(seq_resources.NEXTVAL,'BiC Pens','BiC rollerball pens. Box of 100.','0005.00');
+
+INSERT INTO resources
+VALUES(seq_resources.NEXTVAL,'Staples','Staples for staplers. Box of 5000.','0005.00');
+
+INSERT INTO resources
+VALUES(seq_resources.NEXTVAL,'Post-It Notes','Pack of Post-It notes. 700 note pack.','0010.00');
+
+INSERT INTO resources
+VALUES(seq_resources.NEXTVAL,'Whiteboard Markers','Pack of Staedtler colour markers, 8 per pack.','0010.58');
+
 PROMPT Inserting data into the 'project_teams' table
 
 --Inserting properly formatted data
