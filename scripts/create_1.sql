@@ -59,7 +59,7 @@ CREATE TABLE resources(
 resource_id NUMBER(8),
 resource_name VARCHAR2(20) NOT NULL,
 resource_description VARCHAR2(50) NOT NULL,
-resource_cost NUMBER(8) NOT NULL);
+resource_cost NUMBER(4,2));
 
 --Create 'project_resources' table
 PROMPT 'project_resources' table
