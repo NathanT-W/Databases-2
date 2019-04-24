@@ -14,7 +14,7 @@ INSERT INTO employees
 VALUES(seq_employees.NEXTVAL, 'MR', 'JOHN', 'DOE', 'M', 'JOHN@DOE.COM', '01234567899', '99876543210', '101', 'RANDOM STREET', 'NORTHAMPTON', 'NORTHAMPTONSHIRE', 'NN15PH', 'GB');
 
 INSERT INTO employees 
-VALUES(seq_employees.NEXTVAL, 'MRS', 'JANE', 'DOE', 'F', 'JANE@DOE.COM', '01234567899', '99876543210', '101', 'RANDOM STREET', 'NORTHAMPTON', 'NORTHAMPTONSHIRE', 'NN15PH', 'GB');
+VALUES(seq_employees.NEXTVAL, 'MRS', 'JANE', 'DOE', 'F', 'JANE@DOE.COM', '01234567899', '99876543210', '101', 'RANDOM STREET', 'NEATH', 'NEATH PORT TALBOT', 'SA111UR', 'GB');
 
 INSERT INTO employees 
 VALUES(seq_employees.NEXTVAL, 'MR', 'TONY', 'STARK', 'M', 'TONY@STARKINDUSTRIES.COM', '01234567899', '99876543210', '101', 'RANDOM STREET', 'NORTHAMPTON', 'NORTHAMPTONSHIRE', 'NN15PH', 'GB');
@@ -83,6 +83,7 @@ INSERT INTO employees (employee_id, firstname, surname, email, home_number, mobi
 VALUES (seq_employees.NEXTVAL, 'JOHN', 'DOE', 'JOHN@DOE.COM', '01234567891', '0123456789', '300', 'STREET NAME');
 
 PROMPT Inserting data into the 'specialisms' table
+
 INSERT INTO specialisms 
 VALUES(seq_specialisms.NEXTVAL, 'Project Manager', 'A person that is experienced in managing various aspects of a project.');
 
@@ -115,25 +116,43 @@ VALUES(4, 3);
 
 INSERT INTO employee_specialisms
 VALUES(5, 5);
+PROMPT Inserting data into the 'meetings' table
+
+--Inserting properly formatted data
+
+INSERT INTO meetings
+VALUES(seq_meetings.NEXTVAL, 0000000100000001, 0000100000001, '24-APR-2019');
+
+INSERT INTO meetings
+VALUES(seq_meetings.NEXTVAL, 0000000200000001, 0000100000002, '23-JAN-2019');
+
+INSERT INTO meetings
+VALUES(seq_meetings.NEXTVAL, 0000000300000004, 0000200000003, '15-FEB-2019');
+
+INSERT INTO meetings
+VALUES(seq_meetings.NEXTVAL, 0000000200000002, 0000100000005, '29-MAR-2019');
+
+INSERT INTO meetings
+VALUES(seq_meetings.NEXTVAL, 0000000400000005, 0000300000004, '19-JAN-2019');
 
 PROMPT Inserting data into the 'project_costs' table
 
 --Inserting properly formatted data
 
 INSERT INTO project_costs
-VALUES(750000.00, 00000001, 00000001);
+VALUES(seq_costs.NEXTVAL ,750000.00, 00000001);
 
 INSERT INTO project_costs
-VALUES(850045.00, 00000002, 00000002);
+VALUES(seq_costs.NEXTVAL, 850045.00, 00000002);
 
 INSERT INTO project_costs
-VALUES(632535.64, 00000003, 00000003);
+VALUES(seq_costs.NEXTVAL, 632535.64, 00000003);
 
 INSERT INTO project_costs
-VALUES(148507.07, 00000004, 00000004);
+VALUES(seq_costs.NEXTVAL, 148507.07, 00000004);
 
 INSERT INTO project_costs
-VALUES(750025.00, 00000005, 00000005);
+VALUES(seq_costs.NEXTVAL, 750025.00, 00000005);
 
 PROMPT Inserting data into the 'stages' table
 
@@ -159,19 +178,19 @@ PROMPT Inserting data into the 'project_stages' table
 --Inserting properly formatted data
 
 INSERT INTO project_stages
-VALUES(00000001, 00001, 10);
+VALUES(00000001, 00001);
 
 INSERT INTO project_stages
-VALUES(00000001, 00002, 03);
+VALUES(00000001, 00002);
 
 INSERT INTO project_stages
-VALUES(00000002, 00004, 07);
+VALUES(00000002, 00004);
 
 INSERT INTO project_stages
-VALUES(00000004, 00003, 01);
+VALUES(00000004, 00003);
 
 INSERT INTO project_stages
-VALUES(00000005, 00005, 09);
+VALUES(00000005, 00005);
 
 --Commit changes
 
