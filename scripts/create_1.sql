@@ -90,17 +90,9 @@ resource_id NUMBER(8) NOT NULL);
 --Create 'project_teams' table
 PROMPT 'project_teams' table
 CREATE TABLE project_teams(
-employee_id NUMBER(8) NOT NULL,
+team_id NUMER(8) NOT NULL,
+leader_id NUMBER(8) NOT NULL,
 project_id NUMBER(8) NOT NULL);
-
---Create 'actions' table
-PROMPT 'actions' table
-CREATE TABLE actions(
-action_id NUMBER(8),
-meeting_id NUMBER(8) NOT NULL,
-description VARCHAR2(25) NOT NULL,
-owner_id NUMBER(8) NOT NULL,
-deadline DATE NOT NULL);
 
 --Create 'stages' table
 PROMPT 'stages' table
@@ -121,6 +113,15 @@ meeting_id NUMBER(8),
 team_id NUMBER(13) NOT NULL,
 project_stage_id NUMBER(13) NOT NULL,
 meeting_date DATE NOT NULL);
+
+--Create 'actions' table
+PROMPT 'actions' table
+CREATE TABLE actions(
+action_id NUMBER(8),
+meeting_id NUMBER(8) NOT NULL,
+description VARCHAR2(25) NOT NULL,
+owner_id NUMBER(8) NOT NULL,
+deadline DATE NOT NULL);
 
 --CREATE SEQUENCES
 --seq_employees

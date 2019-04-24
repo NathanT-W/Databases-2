@@ -131,24 +131,6 @@ VALUES(4, 3);
 
 INSERT INTO employee_specialisms
 VALUES(5, 5);
-PROMPT Inserting data into the 'meetings' table
-
---Inserting properly formatted data
-
-INSERT INTO meetings
-VALUES(seq_meetings.NEXTVAL, 0000000100000001, 0000100000001, '24-APR-2019');
-
-INSERT INTO meetings
-VALUES(seq_meetings.NEXTVAL, 0000000200000001, 0000100000002, '23-JAN-2019');
-
-INSERT INTO meetings
-VALUES(seq_meetings.NEXTVAL, 0000000300000004, 0000200000003, '15-FEB-2019');
-
-INSERT INTO meetings
-VALUES(seq_meetings.NEXTVAL, 0000000200000002, 0000100000005, '29-MAR-2019');
-
-INSERT INTO meetings
-VALUES(seq_meetings.NEXTVAL, 0000000400000005, 0000300000004, '19-JAN-2019');
 
 PROMPT Inserting data into the 'project_costs' table
 
@@ -206,6 +188,61 @@ VALUES(00000004, 00003);
 
 INSERT INTO project_stages
 VALUES(00000005, 00005);
+
+PROMPT Inserting data into the 'meetings' table
+
+--Inserting properly formatted data
+
+INSERT INTO meetings
+VALUES(seq_meetings.NEXTVAL, 00000001, 0000100000001, '24-APR-2019');
+
+INSERT INTO meetings
+VALUES(seq_meetings.NEXTVAL, 00000002, 0000100000002, '23-JAN-2019');
+
+INSERT INTO meetings
+VALUES(seq_meetings.NEXTVAL, 00000003, 0000200000003, '15-FEB-2019');
+
+INSERT INTO meetings
+VALUES(seq_meetings.NEXTVAL, 00000002, 0000100000005, '29-MAR-2019');
+
+INSERT INTO meetings
+VALUES(seq_meetings.NEXTVAL, 00000004, 0000300000004, '19-JAN-2019');
+
+PROMPT Inserting data into the 'actions' table
+
+--Inserting properly formatted data
+
+INSERT INTO actions
+VALUES(seq_actions.NEXTVAL, 00000001, 'Decided to increase project budget', 00000003, '04-MAY-2019');
+
+INSERT INTO actions
+VALUES(seq_actions.NEXTVAL, 00000002, 'Decided to decrease project budget', 00000004, '25-JAN-2019');
+
+INSERT INTO actions
+VALUES(seq_actions.NEXTVAL, 00000003, 'Decided to repaint road lines', 00000005, '15-MAR-2019');
+
+INSERT INTO actions
+VALUES(seq_actions.NEXTVAL, 00000004, 'Decided to rearrange office', 00000001, '05-MAY-2019');
+
+INSERT INTO actions
+VALUES(seq_actions.NEXTVAL, 00000005, 'Decided to increase storage capacity', 00000002, '07-JUL-2019');
+
+PROMPT Inserting data into 'projects' table
+
+INSERT INTO projects
+VALUES (seq_projects.NEXTVAL, 'Office Construction', 'Construction of the new office building','20-APR-2019','15-NOV-2019');
+
+INSERT INTO projects
+VALUES (seq_projects.NEXTVAL, 'Old Office Demolish','Demolition of the old office building that is no longer required.','15-JAN-2020','25-MAR-2020');
+
+INSERT INTO projects
+VALUES (seq_projects.NEXTVAL, 'Rebuild Car Park','Rebuilding of the office car park, which was falling into disrepair.','16-NOV-2019','20-NOV-2019');
+
+INSERT INTO projects
+VALUES (seq_projects.NEXTVAL, 'Printer installation','Installation of new fleet of printers.','25-NOV-2019','26-NOV-2019');
+
+INSERT INTO projects
+VALUES (seq_projects.NEXTVAL, 'Office Supplies','Ordering and storing more office supplies (paper, pens, etc.)','1-DEC-2019','5-DEC-2019');
 
 --Commit changes
 

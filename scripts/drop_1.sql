@@ -43,8 +43,6 @@ DROP CONSTRAINT fk_pr_resources;
 
 -- Drop 'project_costs' Foreign Keys
 PROMPT Dropping 'project_costs' Foreign Keys
-ALTER TABLE project_costs
-DROP CONSTRAINT fk_pc_employees;
 
 ALTER TABLE project_costs
 DROP CONSTRAINT fk_pc_projects;
