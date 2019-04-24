@@ -92,6 +92,7 @@ stage_id NUMBER(5) NOT NULL);
 PROMPT 'meetings' table
 CREATE TABLE meetings(
 meeting_id NUMBER(8),
+team_leader_id NUMBER(16) NOT NULL,
 project_stage_id NUMBER(13) NOT NULL,
 meeting_date DATE NOT NULL);
 
