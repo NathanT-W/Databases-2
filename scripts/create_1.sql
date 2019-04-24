@@ -70,7 +70,7 @@ resource_id NUMBER(8) NOT NULL);
 --Create 'project_teams' table
 PROMPT 'project_teams' table
 CREATE TABLE project_teams(
-team_id NUMER(8) NOT NULL,
+team_id NUMBER(8) NOT NULL,
 employee_id NUMBER(8) NOT NULL,
 project_id NUMBER(8) NOT NULL);
 
