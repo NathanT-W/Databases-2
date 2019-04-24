@@ -29,7 +29,7 @@ PRIMARY KEY (project_id);
 PROMPT Primary Key 'project_teams' table
 ALTER TABLE project_teams
 ADD CONSTRAINT pk_project_teams
-PRIMARY KEY(employee_id, project_id);
+PRIMARY KEY(team_id);
 
 PROMPT Primary Key 'meetings' table
 ALTER TABLE meetings
@@ -98,7 +98,7 @@ REFERENCES specialisms(specialism_id);
 PROMPT Foreign Keys 'project_teams' table
 ALTER TABLE project_teams
 ADD CONSTRAINT fk_pt_employees
-FOREIGN KEY(employee_id)
+FOREIGN KEY(leader_id)
 REFERENCES employees(employee_id);
 
 ALTER TABLE project_teams
@@ -145,9 +145,9 @@ REFERENCES stages(stage_id);
 -- Creating 'meeting' Foreign Keys
 PROMPT Foreign Keys 'meetings' table
 ALTER TABLE meetings
-ADD CONSTRAINT fk_m_project_stages
-FOREIGN KEY(project_stage_id)
-REFERENCES project_stages(project_id, stage_id);
+ADD CONSTRAINT fk_m_teams
+FOREIGN KEY(team_id)
+REFERENCES teams(team_id);
 
 -- Creating 'actions' Foreign Keys
 PROMPT Foreign Keys 'actions' table
