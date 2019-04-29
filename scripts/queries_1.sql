@@ -15,7 +15,7 @@ SELECT gender FROM employees
 WHERE gender = 'M';
 
 SELECT city FROM employees
-WHERE city = ('TOWCESTER', 'HARLOW', 'NEATH', 'SOFIA', 'DAYTON', 'NEW YORK CITY');
+WHERE city = ('DAYTON', 'HARLOW', 'NEW YORK CITY', 'NEATH', 'SOFIA', 'TOWCESTER');
 
 SELECT meeting_date FROM meetings
 WHERE meeting_date = ('JAN', 'FEB', 'MAR');
