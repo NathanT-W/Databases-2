@@ -8,17 +8,19 @@
 --Viewing all records in the 'employees' table
 SELECT * FROM employees;
 
-SELECT city FROM employees
+SELECT title,firstname,surname, city FROM employees
 WHERE city = 'NORTHAMPTON';
 
-SELECT gender FROM employees
+SELECT title,firstname,surname, gender FROM employees
 WHERE gender = 'M';
 
-SELECT city FROM employees
-WHERE city = 'TOWCESTER', 'HARLOW', 'NEATH', 'SOFIA', 'DAYTON', 'NEW YORK CITY';
+SELECT title,firstname,surname, city FROM employees
+WHERE city <> 'NORTHAMPTON';
 
-SELECT meeting_date FROM meetings
-WHERE meeting_date = ('JAN', 'FEB', 'MAR');
+SELECT  meeting_id, meeting_date FROM meetings
+WHERE meeting_date BETWEEN '01-JAN-2019' AND '01-APR-2019';
+
+SELECT employees.firstname, employees.surname,
 
 SELECT title, firstname, surname FROM employees ORDER BY surname DESC;
 
