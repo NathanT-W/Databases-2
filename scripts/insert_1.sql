@@ -149,23 +149,6 @@ VALUES (seq_projects.NEXTVAL, 'Printer installation','Installation of new fleet 
 INSERT INTO projects
 VALUES (seq_projects.NEXTVAL, 'Office Supplies','Ordering and storing more office supplies (paper, pens, etc.)','1-DEC-2019','5-DEC-2019');
 
-PROMPT Inserting data into 'project_resources' table
-
-INSERT INTO project_resources
-VALUES (00000001,00000001);
-
-INSERT INTO project_resources
-VALUES (00000002,00000002);
-
-INSERT INTO project_resources
-VALUES (00000003,00000003);
-
-INSERT INTO project_resources
-VALUES (00000004,00000004);
-
-INSERT INTO project_resources
-VALUES (00000005,00000005);
-
 PROMPT Inserting data into 'resources' table
 
 INSERT INTO resources
@@ -182,6 +165,23 @@ VALUES(seq_resources.NEXTVAL,'Post-It Notes','Pack of Post-It notes. 700 note pa
 
 INSERT INTO resources
 VALUES(seq_resources.NEXTVAL,'Whiteboard Markers','Pack of Staedtler colour markers, 8 per pack.','0010.58');
+
+PROMPT Inserting data into 'project_resources' table
+
+INSERT INTO project_resources
+VALUES (00000001,00000001);
+
+INSERT INTO project_resources
+VALUES (00000002,00000002);
+
+INSERT INTO project_resources
+VALUES (00000003,00000003);
+
+INSERT INTO project_resources
+VALUES (00000004,00000004);
+
+INSERT INTO project_resources
+VALUES (00000005,00000005);
 
 PROMPT Inserting data into the 'project_teams' table
 
@@ -207,19 +207,19 @@ PROMPT Inserting data into the 'project_costs' table
 --Inserting properly formatted data
 
 INSERT INTO project_costs
-VALUES(seq_costs.NEXTVAL ,750000.00, 00000001);
+VALUES(seq_costs.NEXTVAL ,7500.00, 00000001);
 
 INSERT INTO project_costs
-VALUES(seq_costs.NEXTVAL, 850045.00, 00000002);
+VALUES(seq_costs.NEXTVAL, 8545.00, 00000002);
 
 INSERT INTO project_costs
-VALUES(seq_costs.NEXTVAL, 632535.64, 00000003);
+VALUES(seq_costs.NEXTVAL, 6535.64, 00000003);
 
 INSERT INTO project_costs
-VALUES(seq_costs.NEXTVAL, 148507.07, 00000004);
+VALUES(seq_costs.NEXTVAL, 1407.07, 00000004);
 
 INSERT INTO project_costs
-VALUES(seq_costs.NEXTVAL, 750025.00, 00000005);
+VALUES(seq_costs.NEXTVAL, 7025.00, 00000005);
 
 PROMPT Inserting data into the 'stages' table
 
@@ -264,19 +264,19 @@ PROMPT Inserting data into the 'meetings' table
 --Inserting properly formatted data
 
 INSERT INTO meetings
-VALUES(seq_meetings.NEXTVAL, 0000000100000001, 0000100000001, '24-APR-2019');
+VALUES(seq_meetings.NEXTVAL, 00000001, 00001, '24-APR-2019');
 
 INSERT INTO meetings
-VALUES(seq_meetings.NEXTVAL, 0000000200000001, 0000100000002, '23-JAN-2019');
+VALUES(seq_meetings.NEXTVAL, 00000002, 00001, '23-JAN-2019');
 
 INSERT INTO meetings
-VALUES(seq_meetings.NEXTVAL, 0000000300000001, 0000100000002, '15-FEB-2019');
+VALUES(seq_meetings.NEXTVAL, 00000003, 00001, '15-FEB-2019');
 
 INSERT INTO meetings
-VALUES(seq_meetings.NEXTVAL, 0000000400000002, 0000200000003, '29-MAR-2019');
+VALUES(seq_meetings.NEXTVAL, 00000004, 00002, '29-MAR-2019');
 
 INSERT INTO meetings
-VALUES(seq_meetings.NEXTVAL, 0000000500000002, 0000200000004, '19-JAN-2019');
+VALUES(seq_meetings.NEXTVAL, 00000005, 00002, '19-JAN-2019');
 
 PROMPT Inserting data into the 'actions' table
 

@@ -106,11 +106,6 @@ REFERENCES resources(resource_id);
 -- Creating 'project_costs' Foreign Keys
 PROMPT Foreign Keys 'project_costs' table
 ALTER TABLE project_costs
-ADD CONSTRAINT fk_pc_employees
-FOREIGN KEY(employee_id)
-REFERENCES employees(employee_id);
-
-ALTER TABLE project_costs
 ADD CONSTRAINT fk_pc_projects
 FOREIGN KEY(project_id)
 REFERENCES projects(project_id);
@@ -131,8 +126,13 @@ REFERENCES stages(stage_id);
 PROMPT Foreign Keys 'meetings' table
 ALTER TABLE meetings
 ADD CONSTRAINT fk_m_teams
-FOREIGN KEY(team_id)
-REFERENCES teams(team_id);
+FOREIGN KEY(team_leader_id)
+REFERENCES employees(employee_id);
+
+ALTER TABLE meetings
+ADD CONSTRAINT fk_m_project_stages
+FOREIGN KEY(project_stage_id)
+REFERENCES stages(stage_id);
 
 -- Creating 'actions' Foreign Keys
 PROMPT Foreign Keys 'actions' table
