@@ -1,5 +1,5 @@
 /*
-* Alexander Turner (18416709), Aidan Rayner (18415915), Nathan Thomas-Williams (18410399)
+* Alexander Turner (18416709), Aidan Rayner (18415915), Nathan Thomas-Williams (18410399), Nathan Segnitz (18412790)
 * CSY1026 Databases 1 - Assignment 2
 */
 
@@ -8,5 +8,20 @@
 --Viewing all records in the 'employees' table
 SELECT * FROM employees;
 
+
+
+SELECT city FROM employees
+WHERE city = 'NORTHAMPTON';
+
+SELECT gender FROM employees
+WHERE gender = 'M';
+
+SELECT city ('TOWCESTER', 'HARLOW', 'NEATH', 'SOFIA', 'DAYTON', 'NEW YORK CITY') FROM employees
+WHERE city = ('TOWCESTER', 'HARLOW', 'NEATH', 'SOFIA', 'DAYTON', 'NEW YORK CITY');
+
+SELECT meeting_date FROM meetings
+WHERE meeting_date = ('JAN', 'FEB', 'MAR');
+
 PROMPT Commit changes
+
 COMMIT;
