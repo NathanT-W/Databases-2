@@ -8,8 +8,6 @@
 --Viewing all records in the 'employees' table
 SELECT * FROM employees;
 
-
-
 SELECT city FROM employees
 WHERE city = 'NORTHAMPTON';
 
