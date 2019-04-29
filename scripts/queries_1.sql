@@ -22,6 +22,8 @@ WHERE city = ('TOWCESTER', 'HARLOW', 'NEATH', 'SOFIA', 'DAYTON', 'NEW YORK CITY'
 SELECT meeting_date FROM meetings
 WHERE meeting_date = ('JAN', 'FEB', 'MAR');
 
+SELECT title, firstname, surname FROM employees ORDER BY surname DESC;
+
 PROMPT Commit changes
 
 COMMIT;
