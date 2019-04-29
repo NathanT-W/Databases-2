@@ -154,7 +154,7 @@ CREATE SEQUENCE seq_costs
 INCREMENT BY 1
 START WITH 00000001;
 
--seq_teams
+--seq_teams
 PROMPT Creating'seq_teams' sequence
 CREATE SEQUENCE seq_teams
 INCREMENT BY 1

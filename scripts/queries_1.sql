@@ -8,5 +8,7 @@
 --Viewing all records in the 'employees' table
 SELECT * FROM employees;
 
+SELECT title, firstname, surname FROM employees ORDER BY surname DESC;
+
 PROMPT Commit changes
 COMMIT;

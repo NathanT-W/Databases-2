@@ -29,22 +29,7 @@ PRIMARY KEY (project_id);
 PROMPT Primary Key 'project_teams' table
 ALTER TABLE project_teams
 ADD CONSTRAINT pk_project_teams
-PRIMARY KEY(team_id);
-
-PROMPT Primary Key 'meetings' table
-ALTER TABLE meetings
-ADD CONSTRAINT pk_meetings
-PRIMARY KEY (meeting_id);
-
-PROMPT Primary Key 'actions' table
-ALTER TABLE actions
-ADD CONSTRAINT pk_actions
-PRIMARY KEY (action_id);
-
-PROMPT Primary Key 'projects' table
-ALTER TABLE projects
-ADD CONSTRAINT pk_projects
-PRIMARY KEY (project_id);
+PRIMARY KEY(employee_id, team_id);
 
 PROMPT Primary Key 'project_resources' table
 ALTER TABLE project_resources
@@ -79,7 +64,7 @@ PRIMARY KEY (action_id);
 PROMPT Primary key 'project_costs' table
 ALTER TABLE project_costs
 ADD CONSTRAINT pk_project_costs
-PRIMARY KEY (project_costs, project_id);
+PRIMARY KEY (project_cost, project_id);
 
 --CREATE Foreign Keys
 -- Creating 'employee_specialisms' Foreign Keys
@@ -98,7 +83,7 @@ REFERENCES specialisms(specialism_id);
 PROMPT Foreign Keys 'project_teams' table
 ALTER TABLE project_teams
 ADD CONSTRAINT fk_pt_employees
-FOREIGN KEY(leader_id)
+FOREIGN KEY(employee_id)
 REFERENCES employees(employee_id);
 
 ALTER TABLE project_teams
