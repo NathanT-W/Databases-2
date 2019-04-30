@@ -5,68 +5,79 @@
 
 -- @C:\Users\natht\Documents\GitHub\Databases-2\scripts\constraint_1.sql
 
---CREATE Primary Keys
+-- ///Create Primary Keys///
 PROMPT Primary Key 'employees' table
 ALTER TABLE employees
 ADD CONSTRAINT pk_employees
 PRIMARY KEY (employee_id);
 
+-- Create 'pk_specialisms' primary key
 PROMPT Primary Key 'specialisms' table
 ALTER TABLE specialisms
 ADD CONSTRAINT pk_specialisms
 PRIMARY KEY (specialism_id);
 
+-- Create 'pk_employee_specialisms' compound primary key
 PROMPT Primary Key 'employee_specialisms' table
 ALTER TABLE employee_specialisms
 ADD CONSTRAINT pk_employee_specialisms
 PRIMARY KEY (employee_id, specialism_id);
 
+-- Create 'pk_projects' primary key
 PROMPT Primary Key 'projects' table
 ALTER TABLE projects
 ADD CONSTRAINT pk_projects
 PRIMARY KEY (project_id);
 
+-- Create 'pk_project_teams' primary key
 PROMPT Primary Key 'project_teams' table
 ALTER TABLE project_teams
 ADD CONSTRAINT pk_project_teams
 PRIMARY KEY(employee_id, team_id);
 
+-- Create 'pk_project_resources' compound primary key
 PROMPT Primary Key 'project_resources' table
 ALTER TABLE project_resources
 ADD CONSTRAINT pk_project_resources
 PRIMARY KEY (project_id, resource_id);
 
+-- Create 'pk_resources' primary key
 PROMPT Primary Key 'resources' table
 ALTER TABLE resources
 ADD CONSTRAINT pk_resources
 PRIMARY KEY (resource_id);
 
+-- Create 'pk_stages' primary key
 PROMPT Primary Key 'stages' table
 ALTER TABLE stages
 ADD CONSTRAINT pk_stages
 PRIMARY KEY (stage_id);
 
+-- Create 'pk_project_stages' compound primary key
 PROMPT Primary Key 'project_stages' table
 ALTER TABLE project_stages
 ADD CONSTRAINT pk_project_stages
 PRIMARY KEY (stage_id, project_id);
 
+-- Create 'pk_meetings' primary key
 PROMPT Primary Key 'meetings' table
 ALTER TABLE meetings
 ADD CONSTRAINT pk_meetings
 PRIMARY KEY (meeting_id);
 
+-- Create 'pk_actions' primary key
 PROMPT Primary Key 'actions' table
 ALTER TABLE actions
 ADD CONSTRAINT pk_actions
 PRIMARY KEY (action_id);
 
+-- Create 'pk_project_costs' compound primary key
 PROMPT Primary key 'project_costs' table
 ALTER TABLE project_costs
 ADD CONSTRAINT pk_project_costs
 PRIMARY KEY (project_cost, project_id);
 
---CREATE Foreign Keys
+-- ///Create Foreign Keys///
 -- Creating 'employee_specialisms' Foreign Keys
 PROMPT Foreign Keys 'employee_specialisms' table
 ALTER TABLE employee_specialisms
@@ -146,63 +157,79 @@ ADD CONSTRAINT fk_a_employees
 FOREIGN KEY(owner_id)
 REFERENCES employees(employee_id);
 
---CREATE CHECK Constraints
+-- ///Create Check Constraints///
 PROMPT Creating check constraints for the 'employees' table
+-- Check Title
 ALTER TABLE employees
 ADD CONSTRAINT ck_title
 CHECK (title = UPPER(title));
 
+-- Check First Name
 ALTER TABLE employees
 ADD CONSTRAINT ck_firstname
 CHECK (firstname = UPPER(firstname));
 
+-- Check Surname
 ALTER TABLE employees
 ADD CONSTRAINT ck_surname
 CHECK (surname = UPPER(surname));
 
-ALTER TABLE employees
-ADD CONSTRAINT ck_streetname
-CHECK (streetname = UPPER(streetname));
-
+-- Check Email Address
 ALTER TABLE employees
 ADD CONSTRAINT ck_email
 CHECK (email = UPPER(email));
 
+-- Check Street Name
+ALTER TABLE employees
+ADD CONSTRAINT ck_streetname
+CHECK (streetname = UPPER(streetname));
+
+-- Check City
 ALTER TABLE employees
 ADD CONSTRAINT ck_city
 CHECK (city = UPPER(city));
 
+-- Check County
 ALTER TABLE employees
 ADD CONSTRAINT ck_county
 CHECK (county = UPPER(county));
 
+-- Check Post Code
 ALTER TABLE employees
 ADD CONSTRAINT ck_postcode
 CHECK (postcode = UPPER(postcode));
 
+-- Check Country
 ALTER TABLE employees
 ADD CONSTRAINT ck_country
 CHECK (country = UPPER(country));
 
---Add default values to 'employees' table
+-- ///Add default values to 'employees' table///
 PROMPT Default values for 'employees'
+-- Set Title Default
 ALTER TABLE employees
 MODIFY title DEFAULT 'MR';
 
+-- Set Gender Default
 ALTER TABLE employees
 MODIFY gender DEFAULT 'M';
 
+-- Set City Default
 ALTER TABLE employees
 MODIFY city DEFAULT 'NORTHAMPTON';
 
+-- Set County Default
 ALTER TABLE employees
 MODIFY county DEFAULT 'NORTHAMPTONSHIRE';
 
+-- Set Post Code Default
 ALTER TABLE employees
 MODIFY postcode DEFAULT 'NN1 5PH';
 
+-- Set Country Default
 ALTER TABLE employees
 MODIFY country DEFAULT 'GB';
 
+-- ///Commit all changes///
 PROMPT Commit changes
 COMMIT;

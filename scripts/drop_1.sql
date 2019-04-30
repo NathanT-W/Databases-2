@@ -5,7 +5,7 @@
 
 -- @C:\Users\natht\Documents\GitHub\Databases-2\scripts\drop_1.sql
 
--- ///DROP Sequences///
+-- ///Drop Sequences///
 
 PROMPT Dropping sequence 'seq_teams'
 DROP SEQUENCE seq_teams;
@@ -26,7 +26,7 @@ DROP SEQUENCE seq_specialisms;
 PROMPT Dropping sequence 'seq_employees'
 DROP SEQUENCE seq_employees;
 
--- ///DROP Foreign Keys///
+-- ///Drop Foreign Keys///
 
 -- Drop 'actions' Foreign Keys
 PROMPT Dropping 'actions' Foreign Keys
@@ -82,7 +82,7 @@ DROP CONSTRAINT fk_es_employees;
 ALTER TABLE employee_specialisms
 DROP CONSTRAINT fk_es_specialisms;
 
--- ///DROP Primary Keys///
+-- ///Drop Primary Keys///
 
 -- Drop 'project_costs' Primary Key
 PROMPT Dropping 'Project_costs' Primary Key
@@ -144,7 +144,7 @@ PROMPT Dropping 'Employees' Primary Key
 ALTER TABLE employees
 DROP CONSTRAINT pk_employees;
 
--- ///Drop TABLES///
+-- ///Drop Tables///
 
 -- Drop 'actions' table
 PROMPT Dropping 'actions' table

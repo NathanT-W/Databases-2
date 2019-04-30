@@ -5,9 +5,10 @@
 
 -- @C:\Users\natht\Documents\GitHub\Databases-2\scripts\queries_1.sql
 
---Viewing all records in the 'employees' table
+PROMPT Viewing all data from 'employees'.
 SELECT * FROM employees;
 
+PROMPT Selecting title, firstname, surname, and city from 'employees', where city is 'Northampton.'
 SELECT title,firstname,surname, city FROM employees
 WHERE city = 'NORTHAMPTON';
 
