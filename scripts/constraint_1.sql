@@ -203,11 +203,11 @@ CHECK (country = UPPER(country));
 PROMPT Creating check constraints for the 'specialisms' table
 ALTER TABLE specialisms
 ADD CONSTRAINT ck_specialism_name
-CHECK (specialism_name = UPPPER(name));
+CHECK (specialism_name = UPPER(specialism_name));
 
 ALTER TABLE specialisms
 ADD CONSTRAINT ck_specialism_description
-CHECK (specialism_description = UPPER(description));
+CHECK (specialism_description = UPPER(specialism_description));
 
 
 PROMPT Creating check constraints for the 'projects' table
