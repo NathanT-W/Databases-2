@@ -205,69 +205,69 @@ VALUES(seq_resources.NEXTVAL,'Whiteboard Markers','Pack of Staedtler colour mark
 
 
 PROMPT Inserting data into 'project_resources' table
-PROMPT Inserting values "00000001,00000001".
+PROMPT Inserting values "1,1".
 INSERT INTO project_resources
-VALUES (00000001,00000001);
+VALUES (1,1);
 
-PROMPT Inserting values "00000002,00000002".
+PROMPT Inserting values "2,2".
 INSERT INTO project_resources
-VALUES (00000002,00000002);
+VALUES (2,2);
 
-PROMPT Inserting values "00000003,00000003".
+PROMPT Inserting values "3,3".
 INSERT INTO project_resources
-VALUES (00000003,00000003);
+VALUES (3,3);
 
-PROMPT Inserting values "00000004,00000004".
+PROMPT Inserting values "4,4".
 INSERT INTO project_resources
-VALUES (00000004,00000004);
+VALUES (4,4);
 
-PROMPT Inserting values "00000005,00000005".
+PROMPT Inserting values "5,5".
 INSERT INTO project_resources
-VALUES (00000005,00000005);
+VALUES (5,5);
 
 
 PROMPT Inserting data into the 'project_teams' table
-PROMPT Inserting IDs and values "00000003,00000001".
+PROMPT Inserting IDs and values "3,1".
 INSERT INTO project_teams
-VALUES(seq_teams.NEXTVAL, 00000003, 00000001);
+VALUES(seq_teams.NEXTVAL, 3, 1);
 
-PROMPT Inserting IDs and values "00000002,00000001".
+PROMPT Inserting IDs and values "2,1".
 INSERT INTO project_teams
-VALUES (seq_teams.CURRVAL, 00000002, 00000001);
+VALUES (seq_teams.CURRVAL, 2, 1);
 
-PROMPT Inserting IDs and values "00000001,00000001".
+PROMPT Inserting IDs and values "1,1".
 INSERT INTO project_teams
-VALUES (seq_teams.CURRVAL, 00000001, 00000001);
+VALUES (seq_teams.CURRVAL, 1, 1);
 
-PROMPT Inserting IDs and values "00000005,00000002".
+PROMPT Inserting IDs and values "5,2".
 INSERT INTO project_teams
-VALUES (seq_teams.NEXTVAL, 00000005, 00000002);
+VALUES (seq_teams.NEXTVAL, 5, 2);
 
-PROMPT Inserting IDs and values "00000004,00000002".
+PROMPT Inserting IDs and values "4,2".
 INSERT INTO project_teams
-VALUES (seq_teams.CURRVAL, 00000004, 00000002);
+VALUES (seq_teams.CURRVAL, 4, 2);
 
 
 PROMPT Inserting data into the 'project_costs' table
-PROMPT Inserting IDs and values "7500.00,00000001".
+PROMPT Inserting IDs and values "7500.00,1".
 INSERT INTO project_costs
-VALUES(seq_costs.NEXTVAL ,7500.00, 00000001);
+VALUES(seq_costs.NEXTVAL ,7500.00, 1);
 
-PROMPT Inserting IDs and values "8545.00,00000002".
+PROMPT Inserting IDs and values "8545.00,2".
 INSERT INTO project_costs
-VALUES(seq_costs.NEXTVAL, 8545.00, 00000002);
+VALUES(seq_costs.NEXTVAL, 8545.00, 2);
 
-PROMPT Inserting IDs and values "6535.64,00000003".
+PROMPT Inserting IDs and values "6535.64,3".
 INSERT INTO project_costs
-VALUES(seq_costs.NEXTVAL, 6535.64, 00000003);
+VALUES(seq_costs.NEXTVAL, 6535.64, 3);
 
-PROMPT Inserting IDs and values "1407.07,00000004".
+PROMPT Inserting IDs and values "1407.07,4".
 INSERT INTO project_costs
-VALUES(seq_costs.NEXTVAL, 1407.07, 00000004);
+VALUES(seq_costs.NEXTVAL, 1407.07, 4);
 
-PROMPT Inserting IDs and values "7025.00,00000005".
+PROMPT Inserting IDs and values "7025.00,5".
 INSERT INTO project_costs
-VALUES(seq_costs.NEXTVAL, 7025.00, 00000005);
+VALUES(seq_costs.NEXTVAL, 7025.00, 5);
 
 
 PROMPT Inserting data into the 'stages' table
@@ -293,69 +293,69 @@ VALUES(seq_stages.NEXTVAL, 'Final Build', '24-AUG-2019', '24-SEP-2019');
 
 
 PROMPT Inserting data into the 'project_stages' table
-PROMPT Inserting values "00000001,00001".
+PROMPT Inserting values "1,1".
 INSERT INTO project_stages
-VALUES(00000001, 00001);
+VALUES(1, 1);
 
-PROMPT Inserting values "00000001,00002".
+PROMPT Inserting values "1,2".
 INSERT INTO project_stages
-VALUES(00000001, 00002);
+VALUES(1, 2);
 
-PROMPT Inserting values "00000002,00003".
+PROMPT Inserting values "2,3".
 INSERT INTO project_stages
-VALUES(00000002, 00003);
+VALUES(2, 3);
 
-PROMPT Inserting values "00000002,00004".
+PROMPT Inserting values "2,4".
 INSERT INTO project_stages
-VALUES(00000002, 00004);
+VALUES(2, 4);
 
-PROMPT Inserting values "00000002,00005".
+PROMPT Inserting values "2,5".
 INSERT INTO project_stages
-VALUES(00000002, 00005);
+VALUES(2, 5);
 
 
 PROMPT Inserting data into the 'meetings' table
-PROMPT Inserting IDs and values "00000001,00001", with date "24-APR-2019'".
+PROMPT Inserting IDs and values "1,1", with date "24-APR-2019'".
 INSERT INTO meetings
-VALUES(seq_meetings.NEXTVAL, 00000001, 00001, '24-APR-2019');
+VALUES(seq_meetings.NEXTVAL, 1, 1, '24-APR-2019');
 
-PROMPT Inserting IDs and values "00000002,00001", with date "23-JAN-2019".
+PROMPT Inserting IDs and values "2,1", with date "23-JAN-2019".
 INSERT INTO meetings
-VALUES(seq_meetings.NEXTVAL, 00000002, 00001, '23-JAN-2019');
+VALUES(seq_meetings.NEXTVAL, 2, 1, '23-JAN-2019');
 
-PROMPT Inserting IDs and values "00000003,00001", with date "15-FEB-2019".
+PROMPT Inserting IDs and values "3,1", with date "15-FEB-2019".
 INSERT INTO meetings
-VALUES(seq_meetings.NEXTVAL, 00000003, 00001, '15-FEB-2019');
+VALUES(seq_meetings.NEXTVAL, 3, 1, '15-FEB-2019');
 
-PROMPT Inserting IDs and values "00000004,00002", with date "29-MAR-2019".
+PROMPT Inserting IDs and values "4,2", with date "29-MAR-2019".
 INSERT INTO meetings
-VALUES(seq_meetings.NEXTVAL, 00000004, 00002, '29-MAR-2019');
+VALUES(seq_meetings.NEXTVAL, 4, 2, '29-MAR-2019');
 
-PROMPT Inserting IDs and values "00000005,00002", with date "19-JAN-2019".
+PROMPT Inserting IDs and values "5,2", with date "19-JAN-2019".
 INSERT INTO meetings
-VALUES(seq_meetings.NEXTVAL, 00000005, 00002, '19-JAN-2019');
+VALUES(seq_meetings.NEXTVAL, 5, 2, '19-JAN-2019');
 
 
 PROMPT Inserting data into the 'actions' table
 PROMPT Inserting "Increase Project Budget" details.
 INSERT INTO actions
-VALUES(seq_actions.NEXTVAL, 00000001, 'Decided to increase project budget', '04-MAY-2019');
+VALUES(seq_actions.NEXTVAL, 1, 'Decided to increase project budget', '04-MAY-2019');
 
 PROMPT Inserting "Decrease Project Budget" details.
 INSERT INTO actions
-VALUES(seq_actions.NEXTVAL, 00000002, 'Decided to decrease project budget', '25-JAN-2019');
+VALUES(seq_actions.NEXTVAL, 2, 'Decided to decrease project budget', '25-JAN-2019');
 
 PROMPT Inserting "Road Line Repaint" details.
 INSERT INTO actions
-VALUES(seq_actions.NEXTVAL, 00000003, 'Decided to repaint road lines', '15-MAR-2019');
+VALUES(seq_actions.NEXTVAL, 3, 'Decided to repaint road lines', '15-MAR-2019');
 
 PROMPT Inserting "Rearrange Office" details.
 INSERT INTO actions
-VALUES(seq_actions.NEXTVAL, 00000004, 'Decided to rearrange office', '05-MAY-2019');
+VALUES(seq_actions.NEXTVAL, 4, 'Decided to rearrange office', '05-MAY-2019');
 
 PROMPT Inserting "Storage Capacity Increase" details.
 INSERT INTO actions
-VALUES(seq_actions.NEXTVAL, 00000001, 'Decided to increase storage capacity of building', '07-JUL-2019');
+VALUES(seq_actions.NEXTVAL, 1, 'Decided to increase storage capacity of building', '07-JUL-2019');
 
 -- ///Commit all changes///
 PROMPT Commit changes
