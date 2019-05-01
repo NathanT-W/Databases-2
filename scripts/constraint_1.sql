@@ -199,6 +199,48 @@ ALTER TABLE employees
 ADD CONSTRAINT ck_country
 CHECK (country = UPPER(country));
 
+
+PROMPT Creating check constraints for the 'specialisms' table
+ALTER TABLE specialisms
+ADD CONSTRAINT ck_specialism_name
+CHECK (specialism_name = UPPPER(name));
+
+ALTER TABLE specialisms
+ADD CONSTRAINT ck_specialism_description
+CHECK (specialism_description = UPPER(description));
+
+
+PROMPT Creating check constraints for the 'projects' table
+ALTER TABLE projects
+ADD CONSTRAINT ck_project_name
+CHECK (project_name = UPPER(project_name));
+
+ALTER TABLE projects
+ADD CONSTRAINT ck_project_aim
+CHECK (project_aim = UPPER(project_aim));
+
+
+PROMPT Creating check constraints for the 'resources' table
+ALTER TABLE resources
+ADD CONSTRAINT ck_resource_name
+CHECK (resource_name = UPPER(resource_name));
+
+ALTER TABLE resources
+ADD CONSTRAINT ck_resource_description
+CHECK (resource_description = UPPER(resource_description));
+
+
+PROMPT Creating check constraints for the 'stages' table
+ALTER TABLE stages
+ADD CONSTRAINT ck_stage_description
+CHECK (stage_description = UPPER(stage_description));
+
+
+PROMPT Creating check constraints for the 'actions' table
+ALTER TABLE actions
+ADD CONSTRAINT ck_action_description
+CHECK (action_description = UPPER(action_description));
+
 -- ///Add default values to 'employees' table///
 PROMPT Default values for 'employees'
 -- Set Title Default
