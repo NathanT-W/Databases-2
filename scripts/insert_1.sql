@@ -7,43 +7,33 @@
 
 -- ///Inserting into Tables///
 PROMPT Inserting data into the 'employees' table
-PROMPT Inserting first line of data.
 INSERT INTO employees
 VALUES(seq_employees.NEXTVAL, 'MR', 'ALEXANDER', 'TURNER', 'M', '18416709@MY.NORTHAMPTON.AC.UK', '01234567899', '99876543210', '101', 'RANDOM STREET', 'TOWCESTER', 'NORTHAMPTONSHIRE', 'NN128DD', 'GB');
 
-PROMPT Inserting second line of data.
 INSERT INTO employees
 VALUES(seq_employees.NEXTVAL, 'MR', 'AIDAN', 'RAYNER', 'M', '18415915@MY.NORTHAMPTON.AC.UK', '01234567899', '99876543210', '73', 'LADYSHOT', 'HARLOW', 'ESSEX', 'CM203EN', 'GB');
 
-PROMPT Inserting third line of data.
 INSERT INTO employees
 VALUES(seq_employees.NEXTVAL, 'MR', 'NATHAN', 'THOMAS-WILLIAMS', 'M', '18410399@MY.NORTHAMPTON.AC.UK', '01234567899', '99876543210', '101', 'RANDOM STREET', 'NEATH', 'NEATH PORT TALBOT', 'SA111UR', 'GB');
 
-PROMPT Inserting fourth line of data.
 INSERT INTO employees 
 VALUES(seq_employees.NEXTVAL, 'MR', 'JOHN', 'DOE', 'M', 'JOHN@DOE.COM', '01234567899', '99876543210', '101', 'RANDOM STREET', 'NORTHAMPTON', 'NORTHAMPTONSHIRE', 'NN15PH', 'GB');
 
-PROMPT Inserting fifth line of data.
 INSERT INTO employees 
 VALUES(seq_employees.NEXTVAL, 'MRS', 'JANE', 'DOE', 'F', 'JANE@DOE.COM', '01234567899', '99876543210', '101', 'RANDOM STREET', 'NORTHAMPTON', 'NORTHAMPTONSHIRE', 'NN15PH', 'GB');
 
-PROMPT Inserting sixth line of data.
 INSERT INTO employees 
 VALUES(seq_employees.NEXTVAL, 'MR', 'TONY', 'STARK', 'M', 'TONY@STARKINDUSTRIES.COM', '01234567899', '99876543210', '101', 'RANDOM STREET', 'SOFIA', 'SOFIA', '100', 'GB');
 
-PROMPT Inserting seventh line of data.
 INSERT INTO employees 
 VALUES(seq_employees.NEXTVAL, 'MR', 'BRUCE', 'BANNER', 'M', 'BRUCE@THEHULK.COM', '01234567899', '99876543210', '101', 'RANDOM STREET', 'DAYTON', 'OHIO', '45402', 'US');
 
-PROMPT Inserting eighth line of data.
 INSERT INTO employees 
 VALUES(seq_employees.NEXTVAL, 'MR', 'STEVE', 'ROGERS', 'M', 'STEVE@CAPTAINAMERICA.COM', '01234567899', '99876543210', '101', 'RANDOM STREET', 'NEW YORK CITY', 'NEW YORK', '10002', 'US');
 
-PROMPT Inserting ninth line of data.
 INSERT INTO employees
 VALUES(seq_employees.NEXTVAL, 'MR', 'PETER', 'PARKER', 'M', 'PETER@SPIDERMAN.COM', '01234567899', '99876543210', '101', 'RANDOM STREET', 'NEW YORK CITY', 'NEW YORK', '11101', 'US');
 
-PROMPT Inserting tenth line of data.
 INSERT INTO employees
 VALUES(seq_employees.NEXTVAL, 'MR', 'MILES', 'MORALES', 'M', 'MILES@SPIDERMAN.COM', '01234567899', '99876543210', '101', 'RANDOM STREET', 'NEW YORK CITY', 'NEW YORK', '11201', 'US');
 
@@ -123,7 +113,7 @@ VALUES(seq_employees.NEXTVAL, 'MRS', 'CAROL', 'DANVERS', 'F', 'CAROL@CAPTAINMARV
 -- ///Testing Default values///
 PROMPT Testing default values by missing variables past the street name.
 INSERT INTO employees (employee_id, firstname, surname, email, home_number, mobile_number, house_no, streetname)
-VALUES (seq_employees.NEXTVAL, 'JOHN', 'DOE', 'JOHN@DOE.COM', '01234567891', '0123456789', '300', 'STREET NAME');
+VALUES (seq_employees.NEXTVAL, 'JOHN', 'APPLES', 'JOHN@DOE.COM', '01234567891', '0123456789', '300', 'STREET NAME');
 
 
 -- ///Inserting Data///
@@ -349,23 +339,23 @@ VALUES(seq_meetings.NEXTVAL, 00000005, 00002, '19-JAN-2019');
 PROMPT Inserting data into the 'actions' table
 PROMPT Inserting "Increase Project Budget" details.
 INSERT INTO actions
-VALUES(seq_actions.NEXTVAL, 00000001, 'Decided to increase project budget', 00000003, '04-MAY-2019');
+VALUES(seq_actions.NEXTVAL, 00000001, 'Decided to increase project budget', '04-MAY-2019');
 
 PROMPT Inserting "Decrease Project Budget" details.
 INSERT INTO actions
-VALUES(seq_actions.NEXTVAL, 00000002, 'Decided to decrease project budget', 00000004, '25-JAN-2019');
+VALUES(seq_actions.NEXTVAL, 00000002, 'Decided to decrease project budget', '25-JAN-2019');
 
 PROMPT Inserting "Road Line Repaint" details.
 INSERT INTO actions
-VALUES(seq_actions.NEXTVAL, 00000003, 'Decided to repaint road lines', 00000005, '15-MAR-2019');
+VALUES(seq_actions.NEXTVAL, 00000003, 'Decided to repaint road lines', '15-MAR-2019');
 
 PROMPT Inserting "Rearrange Office" details.
 INSERT INTO actions
-VALUES(seq_actions.NEXTVAL, 00000004, 'Decided to rearrange office', 00000001, '05-MAY-2019');
+VALUES(seq_actions.NEXTVAL, 00000004, 'Decided to rearrange office', '05-MAY-2019');
 
 PROMPT Inserting "Storage Capacity Increase" details.
 INSERT INTO actions
-VALUES(seq_actions.NEXTVAL, 00000001, 'Decided to increase storage capacity of building', 00000002, '07-JUL-2019');
+VALUES(seq_actions.NEXTVAL, 00000001, 'Decided to increase storage capacity of building', '07-JUL-2019');
 
 -- ///Commit all changes///
 PROMPT Commit changes

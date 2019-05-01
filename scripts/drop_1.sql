@@ -33,13 +33,13 @@ PROMPT Dropping 'actions' Foreign Keys
 ALTER TABLE actions
 DROP CONSTRAINT fk_a_meetings;
 
-ALTER TABLE actions
-DROP CONSTRAINT fk_a_employees;
-
 -- Drop 'meetings' Foreign Keys
 PROMPT Dropping 'meetings' Foreign Keys
 ALTER TABLE meetings
 DROP CONSTRAINT fk_m_teams;
+
+ALTER TABLE meetings
+DROP CONSTRAINT fk_m_project_stages;
 
 -- Drop 'project_stages' Foreign Keys
 PROMPT Dropping 'project_stages' Foreign Keys
@@ -51,9 +51,6 @@ DROP CONSTRAINT fk_ps_stages;
 
 -- Drop 'project_costs' Foreign Keys
 PROMPT Dropping 'project_costs' Foreign Keys
-
-ALTER TABLE project_costs
-DROP CONSTRAINT fk_pc_employees;
 
 ALTER TABLE project_costs
 DROP CONSTRAINT fk_pc_projects;

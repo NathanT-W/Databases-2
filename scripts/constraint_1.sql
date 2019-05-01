@@ -35,17 +35,17 @@ ALTER TABLE project_teams
 ADD CONSTRAINT pk_project_teams
 PRIMARY KEY(employee_id, team_id);
 
--- Create 'pk_project_resources' compound primary key
-PROMPT Primary Key 'project_resources' table
-ALTER TABLE project_resources
-ADD CONSTRAINT pk_project_resources
-PRIMARY KEY (project_id, resource_id);
-
 -- Create 'pk_resources' primary key
 PROMPT Primary Key 'resources' table
 ALTER TABLE resources
 ADD CONSTRAINT pk_resources
 PRIMARY KEY (resource_id);
+
+-- Create 'pk_project_resources' compound primary key
+PROMPT Primary Key 'project_resources' table
+ALTER TABLE project_resources
+ADD CONSTRAINT pk_project_resources
+PRIMARY KEY (project_id, resource_id);
 
 -- Create 'pk_stages' primary key
 PROMPT Primary Key 'stages' table
@@ -151,11 +151,6 @@ ALTER TABLE actions
 ADD CONSTRAINT fk_a_meetings
 FOREIGN KEY(meeting_id)
 REFERENCES meetings(meeting_id);
-
-ALTER TABLE actions
-ADD CONSTRAINT fk_a_employees
-FOREIGN KEY(owner_id)
-REFERENCES employees(employee_id);
 
 -- ///Create Check Constraints///
 PROMPT Creating check constraints for the 'employees' table

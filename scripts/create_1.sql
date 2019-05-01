@@ -102,7 +102,6 @@ CREATE TABLE actions(
 action_id NUMBER(8),
 meeting_id NUMBER(8) NOT NULL,
 description VARCHAR2(50) NOT NULL,
-owner_id NUMBER(8) NOT NULL,
 deadline DATE NOT NULL);
 
 -- ///Create Sequences///
