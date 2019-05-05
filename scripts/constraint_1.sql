@@ -201,45 +201,54 @@ CHECK (country = UPPER(country));
 
 
 PROMPT Creating check constraints for the 'specialisms' table
+-- Check Specialism Name
 ALTER TABLE specialisms
 ADD CONSTRAINT ck_specialism_name
-CHECK (specialism_name = UPPER(specialism_name));
+CHECK (name = UPPER(name));
 
+-- Check Specialism Description
 ALTER TABLE specialisms
 ADD CONSTRAINT ck_specialism_description
-CHECK (specialism_description = UPPER(specialism_description));
+CHECK (description = UPPER(description));
 
 
 PROMPT Creating check constraints for the 'projects' table
+-- Check Project Name
 ALTER TABLE projects
 ADD CONSTRAINT ck_project_name
 CHECK (project_name = UPPER(project_name));
 
+-- Check Project Description
 ALTER TABLE projects
 ADD CONSTRAINT ck_project_aim
 CHECK (project_aim = UPPER(project_aim));
 
 
 PROMPT Creating check constraints for the 'resources' table
+-- Check Resource Name
 ALTER TABLE resources
 ADD CONSTRAINT ck_resource_name
 CHECK (resource_name = UPPER(resource_name));
 
+-- Check Resource Description
 ALTER TABLE resources
 ADD CONSTRAINT ck_resource_description
 CHECK (resource_description = UPPER(resource_description));
 
 
 PROMPT Creating check constraints for the 'stages' table
+-- Check Stage Description
 ALTER TABLE stages
 ADD CONSTRAINT ck_stage_description
-CHECK (stage_description = UPPER(stage_description));
+CHECK (description = UPPER(description));
 
 
 PROMPT Creating check constraints for the 'actions' table
+-- Check Action Description
 ALTER TABLE actions
 ADD CONSTRAINT ck_action_description
-CHECK (action_description = UPPER(action_description));
+CHECK (description = UPPER(description));
+
 
 -- ///Add default values to 'employees' table///
 PROMPT Default values for 'employees'

@@ -28,8 +28,8 @@ country CHAR(2) NOT NULL);
 PROMPT 'specialisms' table
 CREATE TABLE specialisms(
 specialism_id NUMBER(8),
-specialism_name VARCHAR2(20) NOT NULL,
-specialism_description VARCHAR2(280) NOT NULL);
+name VARCHAR2(20) NOT NULL,
+description VARCHAR2(280) NOT NULL);
 
 -- Create 'employee_specialisms' table
 PROMPT 'employee_specialisms' table
@@ -78,7 +78,7 @@ project_id NUMBER(8) NOT NULL);
 PROMPT 'stages' table
 CREATE TABLE stages(
 stage_id NUMBER(5),
-stage_description VARCHAR2(30) NOT NULL,
+description VARCHAR2(30) NOT NULL,
 start_date DATE NOT NULL,
 end_date DATE NOT NULL);
 
@@ -101,7 +101,7 @@ PROMPT 'actions' table
 CREATE TABLE actions(
 action_id NUMBER(8),
 meeting_id NUMBER(8) NOT NULL,
-action_description VARCHAR2(50) NOT NULL,
+description VARCHAR2(50) NOT NULL,
 deadline DATE NOT NULL);
 
 -- ///Create Sequences///
